@@ -10,6 +10,11 @@ export default function FooterMinimal() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const socialLinks = [
+    { name: "LinkedIn", icon: <Linkedin size={16} />, url: "https://www.linkedin.com/company/sunny-software-inc/" },
+    { name: "Instagram", icon: <Instagram size={16} />, url: "https://www.instagram.com/sunny.software/" },
+    { name: "Facebook", icon: <Facebook size={16} />, url: "https://www.facebook.com/sunnysoftware" },
+  ];
   return (
     <footer className="bg-[#0B0F19] min-h-screen flex flex-col justify-between px-6 py-10 md:px-12 md:py-16 font-sans text-white relative overflow-hidden">
       
@@ -39,26 +44,12 @@ export default function FooterMinimal() {
         <div className="absolute bottom-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,transparent,rgba(99,102,241,0.03)_1px)] bg-[size:100%_60px] [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
       </div>
 
-      {/* --------------------------------------------------
-          1. TOP SECTION: Brand & Navigation
-      -------------------------------------------------- */}
-      <div className="flex justify-between items-start md:items-center relative z-10 pb-16 border-b border-white/5">
-        
-        {/* Brand Identity */}
-        <div className="flex flex-col">
-         <Image 
-             src="/Sunny-Logo.webp"
-             alt="Sunny Software Inc. Logo"
-             width={150}
-             height={50}
-             className="mb-4"
-          />
-        </div>
 
+      <div className="flex justify-end items-end md:items-center relative z-10 pb-16 border-b border-white/5">
         {/* Back to Top Button */}
         <button 
             onClick={scrollToTop}
-            className="group flex items-center gap-3 text-sm font-semibold tracking-wider hover:text-indigo-400 transition-colors"
+            className="group flex items-center gap-3 text-sm font-semibold tracking-wider hover:text-indigo-400 transition-colors cursor-pointer"
         >
             <span className="hidden md:block text-slate-400">Back to Top</span>
             <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center group-hover:border-indigo-500/50 group-hover:bg-indigo-500/10 transition-all duration-300">
@@ -129,47 +120,39 @@ export default function FooterMinimal() {
       {/* --------------------------------------------------
           3. BOTTOM SECTION: Social & Legal
       -------------------------------------------------- */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 pt-16 border-t border-white/5">
-        
-        {/* Social Media Links */}
-        <div className="flex flex-col md:flex-row items-center gap-6">
-          <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
-            Connect with us
-          </span>
-          
-          <div className="flex gap-3">
-            {[
-              { name: "LINKEDIN", icon: <Linkedin size={14} />, url: "https://www.linkedin.com/company/sunny-software-inc/" },
-              { name: "INSTAGRAM", icon: <Instagram size={14} />, url: "https://www.instagram.com/sunny.software/" },
-              { name: "FACEBOOK", icon: <Facebook size={14} />, url: "https://www.facebook.com/sunnysoftware" }
-            ].map((social, index) => (
-              <a 
-                key={index} 
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-wider hover:bg-white hover:text-black hover:border-white transition-all duration-300"
-              >
-                {social.icon}
-                <span>{social.name}</span>
-              </a>
-            ))}
-          </div>
+    
+   <div className="border-t border-white/10 px-6 md:px-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        {/* Brand */}
+        <Image src="/Sunny-Logo.webp" alt="Sunny Software Logo" width={150} height={50} />
+
+        {/* Social Links */}
+        <div className="flex items-center gap-4 md:gap-6">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-semibold hover:bg-white hover:text-black transition-all duration-300"
+            >
+              {social.icon} <span>{social.name}</span>
+            </a>
+          ))}
         </div>
 
-        {/* Legal & Copyright */}
-        <div className="flex flex-col items-center md:items-end gap-3">
-          <div className="text-xs font-semibold tracking-widest text-slate-500 uppercase">
-            &copy; {new Date().getFullYear()} SUNNY SOFTWARE INC.
-          </div>
-          <div className="flex gap-6 text-xs text-slate-600 font-medium">
-            <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-400 transition-colors">Terms of Service</a>
+        {/* Legal */}
+        <div className="flex flex-col items-center md:items-end gap-2 text-xs text-slate-500">
+          <span>&copy; {new Date().getFullYear()} SUNNY SOFTWARE INC.</span>
+          <div className="flex gap-4">
+            <a href="#" className="hover:text-slate-400 transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-slate-400 transition-colors">
+              Terms of Service
+            </a>
           </div>
         </div>
-
-      </div>
-
+          </div>
     </footer>
   );
 }

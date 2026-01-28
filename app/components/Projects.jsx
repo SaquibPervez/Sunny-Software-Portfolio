@@ -83,7 +83,7 @@ export default function FeaturedProjects() {
   // Autoplay
   useEffect(() => {
     if (!autoplay) return;
-    const id = setInterval(goNext, 8000);
+    const id = setInterval(goNext, 10000);
     return () => clearInterval(id);
   }, [autoplay, goNext]);
 
@@ -139,12 +139,6 @@ export default function FeaturedProjects() {
           {autoplay ? "Pause" : "Play"}
         </span>
       </button>
-
-      <div className="flex items-center gap-2 text-white/40">
-        <span className="text-xs">Navigation</span>
-        <ChevronLeft className="w-4 h-4" />
-        <ChevronRight className="w-4 h-4" />
-      </div>
     </div>
   </motion.div>
 </div>

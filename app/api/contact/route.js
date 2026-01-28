@@ -7,13 +7,15 @@ export async function POST(request) {
     const { name, email, industry, phone, services, details } = body;
 
     // 1. Configure Transporter (Gmail SMTP)
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.Email_User,
-        pass: process.env.Email_Pass, // Use App Password here
-      },
-    });
+   const transporter = nodemailer.createTransport({
+  host: 'smtp.hostinger.com',  // Correct SMTP host
+  port: 587,                   // TLS port
+  secure: false,               // false for port 587, true for 465
+  auth: {
+    user: process.env.Email_User,
+    pass: process.env.Email_Pass, // make sure it's correct
+  },
+});
 
     // 2. Email Content (Professional HTML Template)
     const mailOptions = {

@@ -107,16 +107,28 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
             <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.href}
-                  className="relative px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
-                >
-                  <span className="relative z-10">{link.title}</span>
-                </Link>
-              ))}
-            </div>
+  {navLinks.map((link, index) => (
+    <Link
+      key={index}
+      href={link.href}
+      className="group px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+    >
+      <span className="relative inline-block py-1"> {/* Added subtle vertical padding for breathing room */}
+        {link.title}
+
+        {/* Smooth, Professional center-out underline animation */}
+        <span
+  className="absolute left-0 bottom-0 h-[2px] w-full
+             origin-center scale-x-0 opacity-0
+             /* Updated Gradient: Symmetrical White to Gray to White */
+             bg-gradient-to-r from-white/90 via-gray-300/90 to-white/90
+             transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+             group-hover:scale-x-100 group-hover:opacity-100"
+/>
+</span>
+    </Link>
+  ))}
+</div>
 
             {/* Desktop Social Links */}
             <div className="flex items-center gap-4">
@@ -128,7 +140,7 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative p-2.5 rounded-full bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
+                  className="group relative p-2.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
                 >
                   <social.icon className="w-4 h-4 text-white/70 group-hover:text-white" />
                   <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 text-xs font-medium bg-black/90 backdrop-blur-sm rounded border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
@@ -306,7 +318,7 @@ export default function Navbar() {
                 exit="closed"
                 className="absolute bottom-6 text-xs font-medium text-white/30"
               >
-                © {new Date().getFullYear()} Saquib Pervez. All rights reserved.
+                © {new Date().getFullYear()} Sunny Software Inc. All rights reserved.
               </motion.div>
             </div>
           </motion.div>
