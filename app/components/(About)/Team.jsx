@@ -89,9 +89,9 @@ const getGradient = (color) => {
 
 export default function Team() {
   return (
-    <section className="bg-[#0B0F19] py-24 md:py-32 font-sans relative overflow-hidden border-t border-white/5">
+    <section className="bg-[#0B0F19] py-12 md:py-24 font-sans relative overflow-hidden border-t border-white/5">
       
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 md:px-20">
         
         {/* --------------------------------------------------
             1. SECTION HEADER
@@ -175,7 +175,7 @@ export default function Team() {
                         // You can change 'notionists' to 'avataaars' or 'micah' for different styles.
                         src={`https://api.dicebear.com/9.x/notionists/svg?seed=${member.name}&backgroundColor=transparent`}
                         alt={member.name}
-                        className="w-[80%] h-[80%] object-contain opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 grayscale group-hover:grayscale-0"
+                        className="w-full h-full object-contain opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 grayscale group-hover:grayscale-0"
                     />
                 </div>
 

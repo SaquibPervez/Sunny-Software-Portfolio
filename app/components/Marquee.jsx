@@ -42,7 +42,7 @@ export default function Marquee() {
   return (
     <section
       ref={marqueeRef}
-      className="py-24 bg-[#0B0F19] overflow-hidden"
+      className="py-10 lg:py-24 bg-[#0B0F19] overflow-hidden"
     >
       <div className="container mx-auto px-4 text-center mb-12">
         <motion.div

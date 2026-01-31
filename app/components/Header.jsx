@@ -107,28 +107,20 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
             <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
-  {navLinks.map((link, index) => (
-    <Link
-      key={index}
-      href={link.href}
-      className="group px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
-    >
-      <span className="relative inline-block py-1"> {/* Added subtle vertical padding for breathing room */}
-        {link.title}
-
-        {/* Smooth, Professional center-out underline animation */}
-        <span
-  className="absolute left-0 bottom-0 h-[2px] w-full
-             origin-center scale-x-0 opacity-0
-             /* Updated Gradient: Symmetrical White to Gray to White */
-             bg-gradient-to-r from-white/90 via-gray-300/90 to-white/90
-             transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-             group-hover:scale-x-100 group-hover:opacity-100"
-/>
-</span>
-    </Link>
-  ))}
-</div>
+              {navLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className="group px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+                >
+                  <span className="relative inline-block py-1">
+                    {link.title}
+                    {/* underline (single-line, no comments/newlines) */}
+                    <span className="absolute left-0 bottom-0 h-[2px] w-full origin-center scale-x-0 opacity-0 bg-gradient-to-r from-white/90 via-gray-300/90 to-white/90 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100 group-hover:opacity-100" />
+                  </span>
+                </Link>
+              ))}
+            </div>
 
             {/* Desktop Social Links */}
             <div className="flex items-center gap-4">
@@ -198,42 +190,26 @@ export default function Navbar() {
             {/* Base dark overlay to ensure visibility */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
 
-            {/* Animated Background Elements */}
+            {/* Animated Background Elements (deterministic, no Math.random) */}
             <div className="absolute inset-0 overflow-hidden">
-              {[...Array(3)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute rounded-full blur-[120px]"
-                  initial={{
-                    x: Math.random() * 100 - 50 + '%',
-                    y: Math.random() * 100 - 50 + '%',
-                    scale: 0
-                  }}
-                  animate={{
-                    x: [
-                      Math.random() * 100 - 50 + '%',
-                      Math.random() * 100 - 50 + '%',
-                      Math.random() * 100 - 50 + '%'
-                    ],
-                    y: [
-                      Math.random() * 100 - 50 + '%',
-                      Math.random() * 100 - 50 + '%',
-                      Math.random() * 100 - 50 + '%'
-                    ],
-                    scale: 1
-                  }}
-                  transition={{
-                    duration: 20 + i * 5,
-                    repeat: Infinity,
-                    repeatType: 'reverse'
-                  }}
-                  style={{
-                    width: `${300 + i * 200}px`,
-                    height: `${300 + i * 200}px`,
-                    background: `radial-gradient(circle, rgba(${120 + i * 40}, ${80 + i * 30}, 255, 0.15), transparent 70%)`
-                  }}
-                />
-              ))}
+              {(() => {
+                const positionsX = ['-35%', '25%', '-20%']
+                const positionsY = ['-28%', '18%', '-14%']
+                return [...Array(3)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute rounded-full blur-[120px]"
+                    initial={{ x: positionsX[i], y: positionsY[i], scale: 0 }}
+                    animate={{ x: positionsX, y: positionsY, scale: 1 }}
+                    transition={{ duration: 20 + i * 5, repeat: Infinity, repeatType: 'reverse' }}
+                    style={{
+                      width: `${300 + i * 200}px`,
+                      height: `${300 + i * 200}px`,
+                      background: `radial-gradient(circle, rgba(${120 + i * 40}, ${80 + i * 30}, 255, 0.15), transparent 70%)`
+                    }}
+                  />
+                ))
+              })()}
             </div>
 
             {/* Menu Content */}

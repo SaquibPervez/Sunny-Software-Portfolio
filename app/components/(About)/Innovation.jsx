@@ -32,16 +32,13 @@ const researchAreas = [
 
 export default function Innovation() {
   return (
-    <section className="bg-[#0B0F19] py-24 md:py-32 font-sans relative overflow-hidden border-t border-white/5">
+    <section className="bg-[#0B0F19] py-12 md:py-24 font-sans relative overflow-hidden border-t border-white/5">
       
-      {/* --------------------------------------------------
-          BACKGROUND: ENGINEERING GRID
-      -------------------------------------------------- */}
       <div className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none">
          <div className="absolute h-full w-full bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-6 md:px-20 relative z-10">
         
         {/* --------------------------------------------------
             1. SECTION HEADER
@@ -52,7 +49,7 @@ export default function Innovation() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-center gap-2 mb-6"
+              className="flex items-center gap-2 mb-6"  
             >
               <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-pulse" />
               <span className="text-indigo-400 text-xs font-bold tracking-[0.2em] uppercase">

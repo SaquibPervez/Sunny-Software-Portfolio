@@ -60,9 +60,9 @@ export default function HowWeWork() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="bg-[#0B0F19] pb-24 font-sans relative overflow-hidden">
+    <section ref={containerRef} className="bg-[#0B0F19] pb-14 md:pb-24 font-sans relative overflow-hidden py-10 md:py-24">
       
-      <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+      <div className="container mx-auto px-6 md:px-20">
         
         {/* --------------------------------------------------
             1. HEADER

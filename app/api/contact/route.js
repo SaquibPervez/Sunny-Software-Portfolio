@@ -9,8 +9,8 @@ export async function POST(request) {
     // 1. Configure Transporter (Gmail SMTP)
    const transporter = nodemailer.createTransport({
   host: 'smtp.hostinger.com',  // Correct SMTP host
-  port: 587,                   // TLS port
-  secure: false,               // false for port 587, true for 465
+  port: 465,                   // TLS port
+  secure: true,               // false for port 587, true for 465
   auth: {
     user: process.env.Email_User,
     pass: process.env.Email_Pass, // make sure it's correct
@@ -69,3 +69,36 @@ export async function POST(request) {
     return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
   }
 }
+
+
+// import { NextResponse } from "next/server";
+// import { Resend } from "resend";
+
+// const resend = new Resend(process.env.RESEND_API_KEY);
+
+// export async function POST(req) {
+//   try {
+//     const { name, email, industry, phone, services, details } =
+//       await req.json();
+
+//     await resend.emails.send({
+//       from: "Sunny Software <onboarding@resend.dev>",
+//       to: ["saquibpervez01@gmail.com"],
+//       subject: `New Lead: ${name} - ${industry}`, 
+//       html: `
+//         <h2>New Project Inquiry</h2>
+//         <p><strong>Name:</strong> ${name}</p>
+//         <p><strong>Email:</strong> ${email}</p>
+//         <p><strong>Phone:</strong> ${phone}</p>
+//         <p><strong>Industry:</strong> ${industry}</p>
+//         <p><strong>Services:</strong> ${services.join(", ")}</p>
+//         <p><strong>Details:</strong><br/>${details}</p>
+//       `,
+//     });
+
+//     return NextResponse.json({ success: true });
+//   } catch (err) {
+//     console.error(err);
+//     return NextResponse.json({ error: "Email failed" }, { status: 500 });
+//   }
+// }

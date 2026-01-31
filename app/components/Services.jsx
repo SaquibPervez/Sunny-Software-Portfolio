@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code, Smartphone, Cpu, Globe, ArrowUpRight, ShieldCheck, Database, Layout, TrendingUp, Cloud } from "lucide-react";
+import Image from "next/image";
 
 // Data with Images and specific gradients
 const services = [
@@ -10,7 +11,7 @@ const services = [
     title: "Web App Development",
     desc: "High-performance, scalable web applications built with modern frameworks like Next.js.",
     icon: Globe,
-    colSpan: "col-span-12 md:col-span-8",
+    colSpan: "col-span-12 lg:col-span-8",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     gradientColor: "from-blue-600/40",
   },
@@ -19,7 +20,7 @@ const services = [
     title: "Mobile App Development",
     desc: "Native-feel iOS & Android applications engineered for performance and usability.",
     icon: Smartphone,
-    colSpan: "col-span-12 md:col-span-4",
+    colSpan: "col-span-12 lg:col-span-4",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop",
     gradientColor: "from-indigo-600/40",
   },
@@ -28,7 +29,7 @@ const services = [
     title: "Custom Software Development",
     desc: "Tailored software solutions designed to match your exact business workflows.",
     icon: Cpu,
-    colSpan: "col-span-12 md:col-span-4",
+    colSpan: "col-span-12 lg:col-span-4",
   image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     gradientColor: "from-purple-600/40",
   },
@@ -37,7 +38,7 @@ const services = [
     title: "Data Science & AI Solutions",
     desc: "Advanced data analysis and intelligent systems that automate and optimize decisions.",
     icon: Database,
-    colSpan: "col-span-12 md:col-span-4",
+    colSpan: "col-span-12 lg:col-span-4",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
     gradientColor: "from-cyan-600/40",
   },
@@ -46,7 +47,7 @@ const services = [
     title: "UI / UX & Web Design",
     desc: "Human-centered design focused on conversion, clarity, and delightful experiences.",
     icon: Layout,
-    colSpan: "col-span-12 md:col-span-4",
+    colSpan: "col-span-12 lg:col-span-4",
     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2070&auto=format&fit=crop",
     gradientColor: "from-pink-600/40",
   },
@@ -55,7 +56,7 @@ const services = [
     title: "SEO & Growth Optimization",
     desc: "Search-first strategies to increase visibility, traffic, and qualified leads.",
     icon: TrendingUp,
-    colSpan: "col-span-12 md:col-span-4",
+    colSpan: "col-span-12 lg:col-span-4",
     image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2070&auto=format&fit=crop",
     gradientColor: "from-amber-600/40",
   },
@@ -64,7 +65,7 @@ const services = [
     title: "Cloud & SaaS Architecture",
     desc: "Scalable, secure cloud infrastructure built for modern SaaS products.",
     icon: Cloud,
-    colSpan: "col-span-12 md:col-span-8",
+    colSpan: "col-span-12 lg:col-span-8",
     image: "https://images.unsplash.com/photo-1642132652866-6fa262d3161f?q=80&w=1460&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     gradientColor: "from-emerald-600/40",
   },
@@ -73,12 +74,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full px-6 md:px-20 py-24 bg-[#0B0F19] relative overflow-hidden" id="services">
+    <section className="px-6 md:px-20 lg:py-24 py-10 bg-[#0B0F19] relative overflow-hidden" id="services">
       
       {/* Background Noise Texture */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `url("https://grainy-gradients.vercel.app/noise.svg")` }}></div>
 
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto relative z-10"> 
         
         {/* Section Heading */}
         <motion.div 
@@ -118,9 +119,12 @@ export default function Services() {
               
               {/* ----- 1. Background Image Layer ----- */}
               <div className="absolute inset-0 z-0">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
+                <Image 
+                  src={service.image}
+                  alt={service.title} 
+                  width={800}
+                  height={600}
+                  priority
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0"
                 />
                 {/* Strong Dark Overlay so text is readable */}
@@ -148,12 +152,6 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-
-              {/* ----- 3. Arrow (COMMENTED OUT AS REQUESTED) ----- */}
-              {/* <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0 z-20">
-                <ArrowUpRight className="text-white w-6 h-6" />
-              </div> 
-              */}
 
             </motion.div>
           ))}

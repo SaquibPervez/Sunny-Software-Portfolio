@@ -51,18 +51,18 @@ export default function OurProcess() {
   const containerRef = useRef(null);
 
   return (
-    <section className="relative bg-[#0B0F19] py-24 md:py-32 overflow-hidden font-sans">
+    <section className="relative bg-[#0B0F19] py-10 md:py-24 overflow-hidden font-sans">
       
       {/* Background Ambience */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto px-6">
+      <div className="container px-6 md:px-20 mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           
           {/* --------------------------------------------------
               LEFT SIDE: STICKY HEADER
           -------------------------------------------------- */}
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 text-center md:text-start">
             <div className="sticky top-32">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
@@ -70,7 +70,7 @@ export default function OurProcess() {
                 viewport={{ once: true }}
                 className="mb-6"
               >
-              <div className="inline-flex items-center gap-2 justify-center">
+              <div className="inline-flex items-center gap-2">
       <span className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-white/80 tracking-wider uppercase">
         Our Methodology
       </span>
@@ -99,7 +99,7 @@ export default function OurProcess() {
               </motion.p>
 
               {/* Trust Badges */}
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 text-center">
                 {[
                     "100% IP Ownership Transfer", 
                     "Strict NDA Protection", 
@@ -146,7 +146,7 @@ export default function OurProcess() {
                   </div>
 
                   {/* Huge Background Number (Parallax Feel) */}
-                  <span className="absolute -top-10 -left-4 md:left-10 text-[120px] font-bold text-white/[0.03] select-none pointer-events-none leading-none z-0">
+                  <span className="absolute -top-10 -left-4 md:left-10 text-[120px] font-bold text-white/60 select-none pointer-events-none leading-none z-0">
                     {step.id}
                   </span>
 
@@ -155,7 +155,7 @@ export default function OurProcess() {
                     
                     {/* Header: Icon & Title */}
                     <div className="flex items-center gap-4 mb-4">
-                      <div className={`p-3 rounded-xl bg-[#0B0F19] border border-white/10 ${step.color}`}>
+                      <div className={`p-3 rounded-xl bg-black/20 border backdrop-blur-md border-white/10 text-white`}>
                         <step.icon size={28} />
                       </div>
                       <h3 className="text-2xl font-bold text-white">{step.title}</h3>

@@ -45,13 +45,13 @@ export default function FooterMinimal() {
       </div>
 
 
-      <div className="flex justify-end items-end md:items-center relative z-10 pb-16 border-b border-white/5">
+      <div className="flex justify-center items-end lg:justify-end relative z-10 pb-12 md:pb-16 border-b border-white/5">
         {/* Back to Top Button */}
         <button 
             onClick={scrollToTop}
             className="group flex items-center gap-3 text-sm font-semibold tracking-wider hover:text-indigo-400 transition-colors cursor-pointer"
         >
-            <span className="hidden md:block text-slate-400">Back to Top</span>
+            <span className="text-slate-400">Back to Top</span>
             <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center group-hover:border-indigo-500/50 group-hover:bg-indigo-500/10 transition-all duration-300">
                 <ArrowUp size={20} className="text-slate-400 group-hover:text-indigo-400" />
             </div>
@@ -61,7 +61,7 @@ export default function FooterMinimal() {
       {/* --------------------------------------------------
           2. MAIN CONTENT SECTION: Contact CTA
       -------------------------------------------------- */}
-      <div className="flex flex-col justify-center items-center flex-1 relative z-10 text-center py-20">
+      <div className="flex flex-col justify-center items-center flex-1 relative z-10 text-center py-14 md:py-20">
         
         {/* Contact Prompt */}
         <div className="mb-12">
@@ -121,7 +121,7 @@ export default function FooterMinimal() {
           3. BOTTOM SECTION: Social & Legal
       -------------------------------------------------- */}
     
-   <div className="border-t border-white/10 px-6 md:px-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+   <div className="border-t border-white/10 px-6 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
         {/* Brand */}
         <Image src="/Sunny-Logo.webp" alt="Sunny Software Logo" width={150} height={50} />
 

@@ -19,11 +19,8 @@ export default function HeroManifesto() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen w-full bg-[#0B0F19] overflow-hidden flex items-center px-6 md:px-12 font-sans"
+      className="relative min-h-screen bg-[#0B0F19] overflow-hidden flex items-center font-sans text-center md:text-start"
     >
-      {/* --------------------------------
-          Background Ambience
-      -------------------------------- */}
       {/* Noise Texture */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none z-20"
@@ -42,7 +39,7 @@ export default function HeroManifesto() {
       {/* --------------------------------
           Content
       -------------------------------- */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-2">
+      <div className="container mx-auto relative z-10 px-6 md:px-20 py-32 ">
         {/* Top Label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +73,7 @@ export default function HeroManifesto() {
               initial={{ y: "120%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="text-[clamp(3rem,6vw,6.5rem)] font-bold text-white tracking-tighter leading-[0.95]"
+              className="text-[clamp(2.7rem,6vw,6.5rem)] font-bold text-white tracking-tighter leading-[0.95]"
             >
               WE BUILD{" "}
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-indigo-400">
@@ -91,7 +88,7 @@ export default function HeroManifesto() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="mt-14 max-w-6xl flex flex-col md:flex-row items-start md:items-end justify-between gap-10 border-l border-white/10 pl-6"
+          className="mt-14 flex flex-col md:flex-row items-center md:items-end justify-between gap-10 border-l border-white/10 pl-6"
         >
           <p className="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed">
             Stop competing on features. We engineer digital products that{" "}

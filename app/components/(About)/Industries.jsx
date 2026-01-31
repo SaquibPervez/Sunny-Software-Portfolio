@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Activity, ShoppingBag, Headset, Cog } from "lucide-react";
+import Image from "next/image";
 
 const industries = [
   {
@@ -43,9 +44,9 @@ export default function Industries() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[#0B0F19] py-24 md:py-32 font-sans relative overflow-hidden border-t border-white/5">
+    <section className="bg-[#0B0F19] py-12 md:py-24 font-sans relative overflow-hidden border-t border-white/5">
       
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 md:px-20">
         
         {/* --------------------------------------------------
             1. SECTION HEADER
@@ -127,9 +128,12 @@ export default function Industries() {
                 className="absolute inset-0 w-full h-full"
               >
                 {/* Background Image */}
-                <img 
+                <Image 
                   src={industries[activeTab].image} 
                   alt={industries[activeTab].name}
+                  width={700}
+                  height={700}
+                  priority
                   className="w-full h-full object-cover opacity-60"
                 />
               </motion.div>

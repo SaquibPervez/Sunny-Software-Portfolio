@@ -71,7 +71,7 @@ const ReviewCard = ({ review }) => (
   p-8 rounded-2xl
   bg-[#0B0F19]/70
   border border-white/10
-  backdrop-blur-lg
+  backdrop-blur-md
   shadow-xl shadow-black/40
   hover:border-indigo-500/30
   transition-all duration-300
@@ -136,12 +136,12 @@ const ReviewCard = ({ review }) => (
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#0B0F19] relative overflow-hidden font-sans border-t border-white/5">
+    <section className="py-10 md:py-24 bg-[#0B0F19] relative overflow-hidden font-sans border-t border-white/5">
       
       {/* Background Decor */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.05),transparent_70%)] pointer-events-none" />
 
-      <div className="container mx-auto px-4 mb-16 relative z-10">
+      <div className="container mx-auto px-6 mb-16 relative z-10">
         
         {/* Header Text */}
         <motion.div 
@@ -177,7 +177,7 @@ export default function Testimonials() {
           className="flex flex-wrap justify-center gap-6 mb-16"
         >
             {/* Google Badge */}
-            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors">
                 <FaGoogle className="text-[#4285F4]" size={28} />
                 <div className="text-left">
                     <div className="flex items-center gap-2 mb-1">
@@ -191,7 +191,7 @@ export default function Testimonials() {
             </div>
 
             {/* Trustpilot Badge */}
-            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors">
                 <SiTrustpilot className="text-[#00b67a]" size={32} />
                 <div className="text-left">
                      <div className="flex items-center gap-2 mb-1">
@@ -205,7 +205,7 @@ export default function Testimonials() {
             </div>
 
             {/* Yelp Badge */}
-            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors">
                 <FaYelp className="text-[#ff1a1a]" size={28} />
                 <div className="text-left">
                     <div className="flex items-center gap-2 mb-1">

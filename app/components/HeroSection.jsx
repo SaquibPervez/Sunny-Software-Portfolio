@@ -97,7 +97,7 @@ export default function HeroModern() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl md:text-9xl font-bold tracking-tighter text-white mb-6 leading-[1.1]"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-6 leading-[1.1]"
         >
           We Build <br className="hidden md:block" /> Digital Excellence.
         </motion.h1>

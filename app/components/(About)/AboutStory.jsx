@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useTransform } from "framer-motion";
 import { ArrowUpRight, Code2, Cpu, BarChart3 } from "lucide-react";
 
 const services = [
@@ -35,11 +35,10 @@ export default function WhatWeDo() {
   const [activeId, setActiveId] = useState(null);
 
   return (
-    <section className="bg-[#0B0F19] py-24 md:py-32 px-6 font-sans relative z-10">
+    <section className="w-full bg-[#0E111D] py-10 md:py-24 px-6 font-sans relative z-10 md:px-20">
       
-      <div className="max-w-7xl mx-auto">
-        
-        {/* --------------------------------------------------
+      <div className="container mx-auto">
+       {/* --------------------------------------------------
             1. SECTION HEADER (Outcome First)
         -------------------------------------------------- */}
         <div className="mb-20 md:mb-28 border-l border-white/10 pl-6 md:pl-8">

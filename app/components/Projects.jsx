@@ -3,10 +3,16 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronRight, ChevronLeft, ExternalLink, Play, Pause, ArrowRight } from "lucide-react";
+import {
+  Code,
+  Database,
+  Cloud,
+  Server,
+  Cpu,
+  Layers,
+} from "lucide-react";
 
-// ------------------------------------------------------------------
-// DATA SECTION
-// ------------------------------------------------------------------
+
 const slides = [
   {
     id: 1,
@@ -58,10 +64,21 @@ const slides = [
   },
 ];
 
+const techIcons = {
+  "React.js": <Code className="w-3.5 h-3.5" />,
+  "Node.js": <Server className="w-3.5 h-3.5" />,
+  "Flask": <Server className="w-3.5 h-3.5" />,
+  "JavaScript": <Code className="w-3.5 h-3.5" />,
+  "Jinja2": <Layers className="w-3.5 h-3.5" />,
+  "MongoDB": <Database className="w-3.5 h-3.5" />,
+  "PostgreSQL": <Database className="w-3.5 h-3.5" />,
+  "AWS": <Cloud className="w-3.5 h-3.5" />,
+};
+
 export default function FeaturedProjects() {
   const [activeId, setActiveId] = useState(1);
   const [autoplay, setAutoplay] = useState(true);
-  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
+  const [direction, setDirection] = useState(1); 
 
   const total = slides.length;
   
@@ -104,7 +121,7 @@ export default function FeaturedProjects() {
     <section className="min-h-screen w-full bg-[#0B0F19] overflow-hidden relative font-sans">
       
       {/* Top Header */}
-      <div className="relative z-30 px-6 md:px-12 lg:px-20 py-12 md:py-16">
+      <div className="relative z-30 px-6 md:px-20 py-10 md:py-24">
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -144,7 +161,7 @@ export default function FeaturedProjects() {
 </div>
 
       {/* Main Content Area */}
-      <div className="relative z-10 px-6 md:px-12 pb-12">
+      <div className="relative z-10 px-6 md:px-20 pb-12">
         <div className="relative mx-auto w-full max-w-6xl h-[480px] md:h-[560px] lg:h-[620px] overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-sm">
           {/* Background Slides */}
           {slides.map((slide) => (
@@ -270,22 +287,30 @@ export default function FeaturedProjects() {
                   </motion.div>
 
                   {/* Tech Stack (moved inside main content area) */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.55 }}
-                    className="flex flex-wrap gap-2"
-                  >
-                    <div className="w-full text-xs text-white/50">Tech Stack</div>
-                    {activeSlide.tech.map((tech, index) => (
-                      <div
-                        key={index}
-                        className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm text-white/80 text-xs"
-                      >
-                        {tech}
-                      </div>
-                    ))}
-                  </motion.div>
+               <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.55 }}
+  className="hidden md:flex flex-wrap gap-2"
+>
+  <div className="w-full text-xs text-white/50">Tech Stack</div>
+
+  {activeSlide.tech.map((tech, index) => (
+    <div
+      key={index}
+      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full
+                 bg-white/5 border border-white/10 backdrop-blur-sm
+                 text-white/80 text-xs"
+    >
+      {techIcons[tech] && (
+        <span className="text-white/60">
+          {techIcons[tech]}
+        </span>
+      )}
+      <span>{tech}</span>
+    </div>
+  ))}
+</motion.div>
 
                 </motion.div>
               </AnimatePresence>
@@ -300,7 +325,7 @@ export default function FeaturedProjects() {
                   onClick={goPrev}
                   whileHover={{ scale: 1.06 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/8 hover:bg-white/12 border border-white/12 text-white transition shadow-lg backdrop-blur-md"
+                  className="flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/8 hover:bg-white/12 border border-white/12 text-white transition shadow-lg backdrop-blur-md cursor-pointer"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </motion.button>
@@ -337,7 +362,7 @@ export default function FeaturedProjects() {
                   onClick={goNext}
                   whileHover={{ scale: 1.06 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/8 hover:bg-white/12 border border-white/12 text-white transition shadow-lg backdrop-blur-md"
+                  className="flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/8 hover:bg-white/12 border border-white/12 text-white transition shadow-lg backdrop-blur-md cursor-pointer"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </motion.button>
