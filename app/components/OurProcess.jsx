@@ -56,7 +56,7 @@ export default function OurProcess() {
       {/* Background Ambience */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="container px-6 md:px-20 mx-auto">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 md:px-20">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           
           {/* --------------------------------------------------

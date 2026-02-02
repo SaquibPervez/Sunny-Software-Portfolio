@@ -17,7 +17,7 @@ export default function Vision() {
   const scaleGlow = useTransform(scrollYProgress, [0, 1], [0.8, 1.2]);
 
   return (
-    <section ref={containerRef} className="bg-[#0B0F19] py-32 md:py-48 font-sans relative overflow-hidden border-t border-white/5 flex items-center justify-center">
+    <section ref={containerRef} className="bg-[#0B0F19] py-10 md:py-24 font-sans relative overflow-hidden border-t border-white/5 flex items-center justify-center">
       
       {/* --------------------------------------------------
           BACKGROUND ATMOSPHERE (The Horizon)

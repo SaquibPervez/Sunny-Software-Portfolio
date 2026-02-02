@@ -46,7 +46,7 @@ export default function Industries() {
   return (
     <section className="bg-[#0B0F19] py-12 md:py-24 font-sans relative overflow-hidden border-t border-white/5">
       
-      <div className="container mx-auto px-6 md:px-20">
+      <div className="mx-auto w-full max-w-screen-2xl px-6 md:px-20">
         
         {/* --------------------------------------------------
             1. SECTION HEADER

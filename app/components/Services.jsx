@@ -74,12 +74,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="px-6 md:px-20 lg:py-24 py-10 bg-[#0B0F19] relative overflow-hidden" id="services">
+    <section className="lg:py-24 py-10 bg-[#0B0F19] relative overflow-hidden" id="services">
       
       {/* Background Noise Texture */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `url("https://grainy-gradients.vercel.app/noise.svg")` }}></div>
 
-      <div className="container mx-auto relative z-10"> 
+      <div className="w-full max-w-screen-2xl mx-auto px-6 md:px-20 relative z-10"> 
         
         {/* Section Heading */}
         <motion.div 

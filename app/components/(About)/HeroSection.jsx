@@ -19,7 +19,7 @@ export default function HeroManifesto() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen bg-[#0B0F19] overflow-hidden flex items-center font-sans text-center md:text-start"
+      className="w-full relative min-h-screen bg-[#0B0F19] overflow-hidden flex items-center font-sans text-center md:text-start"
     >
       {/* Noise Texture */}
       <div
@@ -39,9 +39,9 @@ export default function HeroManifesto() {
       {/* --------------------------------
           Content
       -------------------------------- */}
-      <div className="container mx-auto relative z-10 px-6 md:px-20 py-32 ">
+      <div className="mx-auto w-full max-w-screen-2xl px-6 md:px-20 py-26">
         {/* Top Label */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUpRight, Check, Loader2, ChevronDown } from "lucide-react";
@@ -70,21 +69,21 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-[#0B0F19] min-h-screen pt-32 pb-24 px-6 md:px-12 font-sans relative overflow-hidden">
+    <section className="bg-[#0B0F19] min-h-screen pt-34 pb-24 font-sans relative overflow-hidden">
       
       {/* <Toaster position="top-center" richColors theme="dark" /> */}
 
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 md:px-20 relative z-10">
         
         {/* Header */}
         <div className="mb-16 md:mb-24">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+            className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight"
           >
             Let’s start a <br />
               conversation.
@@ -93,7 +92,7 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-slate-400 text-xl max-w-2xl"
+            className="text-slate-400 text-md md:text-xl max-w-2xl"
           >
             Have a project in mind? We'd love to hear about it.
           </motion.p>
@@ -103,16 +102,22 @@ export default function Contact() {
           
           {/* LEFT COL: Contact Info */}
           <div className="lg:col-span-4 space-y-12">
-            {/* Same Contact Details as before... */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
               <h3 className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Email Us</h3>
-              <a href="mailto:sales@sunnysoftwareinc.com" className="flex items-center gap-3 text-2xl text-white font-medium hover:text-indigo-400 transition-colors group">
+              <a href="mailto:sales@sunnysoftwareinc.com" className="flex items-center gap-3 text-lg md:text-2xl text-white font-medium hover:text-indigo-400 transition-colors group">
                 <Mail size={24} className="text-indigo-500 group-hover:scale-110 transition-transform" />
                 sales@sunnysoftwareinc.com
               </a>
-            </div>
-            {/* ... other contact info ... */}
-             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 mt-8">
+            </motion.div>
+
+             <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+             className="p-6 rounded-2xl bg-white/5 border border-white/10 mt-8">
                <div className="flex items-center gap-3 mb-2">
                  <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -120,7 +125,7 @@ export default function Contact() {
                  </span>
                  <span className="text-white font-bold">Accepting New Projects</span>
                </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* RIGHT COL: Form */}
@@ -130,7 +135,7 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
               onSubmit={handleSubmit}
-              className="space-y-8 bg-[#0F131F] p-8 md:p-12 rounded-3xl border border-white/5"
+              className="space-y-8 bg-[#0F131F] p-6 md:p-12 rounded-3xl border border-white/5"
             >
               
               {mutation.isSuccess ? (
@@ -203,7 +208,7 @@ export default function Contact() {
                       {servicesList.map((service) => (
                         <button
                           key={service} type="button" onClick={() => toggleService(service)}
-                          className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
+                          className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 cursor-pointer ${
                             selectedServices.includes(service) ? "bg-indigo-600 text-white border-indigo-500" : "bg-white/5 text-slate-400 border-white/10 hover:bg-white/10 hover:text-white"
                           }`}
                         >
@@ -227,7 +232,7 @@ export default function Contact() {
                 <button 
   disabled={mutation.isPending}
   type="submit"
-  className="group w-auto inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-md py-2 px-6 rounded-xl hover:bg-white/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+  className="group w-auto inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-md py-2 px-6 rounded-xl hover:bg-white/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
 >
   {mutation.isPending ? (
       <> <Loader2 className="animate-spin" /> Sending... </>

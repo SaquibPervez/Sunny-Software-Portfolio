@@ -11,6 +11,7 @@ import {
   Cpu,
   Layers,
 } from "lucide-react";
+import Image from "next/image";
 
 
 const slides = [
@@ -166,25 +167,38 @@ export default function FeaturedProjects() {
           {/* Background Slides */}
           {slides.map((slide) => (
             <motion.div
-              key={slide.id}
-              initial={false}
-              animate={{
-                scale: activeId === slide.id ? 1 : 1.05,
-                opacity: activeId === slide.id ? 1 : 0
-              }}
-              transition={{
-                duration: 0.8,
-                ease: [0.32, 0.72, 0, 1]
-              }}
-              className="absolute inset-0 w-full h-full"
-            >
-              <div
-                className="absolute inset-0 w-full h-full bg-cover bg-center "
-                style={{ backgroundImage: `url(${slide.image})` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-              <div className={`absolute inset-0 bg-gradient-to-r ${slide.color} opacity-10 mix-blend-overlay`} />
-            </motion.div>
+  key={slide.id}
+  initial={false}
+  animate={{
+    scale: activeId === slide.id ? 1 : 1.05,
+    opacity: activeId === slide.id ? 1 : 0,
+  }}
+  transition={{
+    duration: 0.8,
+    ease: [0.32, 0.72, 0, 1],
+  }}
+  className="absolute inset-0 w-full h-full"
+>
+  {/* Image */}
+  <div className="absolute inset-0">
+    <Image
+      src={slide.image}
+      alt={slide.title ?? "Slide image"}
+      fill
+      priority
+      sizes="100vw"
+      className="object-cover object-center"
+    />
+  </div>
+
+  {/* Dark gradient */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+
+  {/* Color overlay */}
+  <div
+    className={`absolute inset-0 bg-gradient-to-r ${slide.color} opacity-10 mix-blend-overlay`}
+  />
+</motion.div>
           ))}
 
           {/* Content Overlay */}

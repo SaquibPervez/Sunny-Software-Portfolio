@@ -35,9 +35,9 @@ export default function WhatWeDo() {
   const [activeId, setActiveId] = useState(null);
 
   return (
-    <section className="w-full bg-[#0E111D] py-10 md:py-24 px-6 font-sans relative z-10 md:px-20">
+    <section className="w-full bg-[#0E111D] py-10 md:py-24 font-sans relative z-10">
       
-      <div className="container mx-auto">
+      <div className="mx-auto w-full max-w-screen-2xl px-6 md:px-20">
        {/* --------------------------------------------------
             1. SECTION HEADER (Outcome First)
         -------------------------------------------------- */}

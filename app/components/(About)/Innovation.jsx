@@ -38,7 +38,7 @@ export default function Innovation() {
          <div className="absolute h-full w-full bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-20 relative z-10">
+      <div className="mx-auto w-full max-w-screen-2xl px-6 md:px-20 relative z-10">
         
         {/* --------------------------------------------------
             1. SECTION HEADER

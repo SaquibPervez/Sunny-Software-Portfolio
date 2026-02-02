@@ -29,3 +29,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Prevent accidental horizontal scroll due to wide/animated elements */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
