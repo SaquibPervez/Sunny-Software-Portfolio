@@ -208,7 +208,7 @@ export default function Contact() {
                       {servicesList.map((service) => (
                         <button
                           key={service} type="button" onClick={() => toggleService(service)}
-                          className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 cursor-pointer ${
+                          className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 cursor-poi ${
                             selectedServices.includes(service) ? "bg-indigo-600 text-white border-indigo-500" : "bg-white/5 text-slate-400 border-white/10 hover:bg-white/10 hover:text-white"
                           }`}
                         >
