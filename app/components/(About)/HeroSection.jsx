@@ -76,7 +76,7 @@ export default function HeroManifesto() {
               className="text-[clamp(2.7rem,6vw,6.5rem)] font-bold text-white tracking-tighter leading-[0.95]"
             >
               WE BUILD{" "}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-indigo-400">
+              <span className="block">
                 UNFAIR ADVANTAGES.
               </span>
             </motion.h1>
