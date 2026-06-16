@@ -92,7 +92,18 @@ export default function Hero() {
         
         {/* Left Side: Copywriting & Actions Frame */}
         <div className="lg:col-span-6 flex flex-col text-center lg:text-left items-center lg:items-start">
-        
+
+          {/* Top Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-5 flex items-center gap-2 bg-blue-600/10 border border-blue-500/25 text-blue-400 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full"
+          >
+            <Shield size={13} />
+            Smart Software. Better Care.
+          </motion.div>
+
           {/* Core Typography Stack */}
           <div className="space-y-5 max-w-2xl lg:max-w-none">
             <div className="overflow-hidden py-1">
@@ -104,13 +115,21 @@ export default function Hero() {
               >
                 Healthcare Software <br />
                 Solutions Built for{" "}
-                <span className="block text-indigo-400">
+                <span className="block text-blue-500">
                   Modern Care Systems
                 </span>
               </motion.h1>
             </div>
 
-            <motion.p 
+            {/* Blue Decorative Divider */}
+            <motion.div
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="w-16 h-[3px] bg-blue-500 rounded-full origin-left"
+            />
+
+            <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
@@ -121,36 +140,84 @@ export default function Hero() {
           </div>
 
           {/* Call To Actions Callouts */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-indigo-600/20 hover:scale-[1.02] active:scale-[0.98]">
+            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-700/25 hover:scale-[1.02] active:scale-[0.98]">
               <Calendar size={18} />
               Book a Consultation
             </button>
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
+            <button className="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/20 hover:border-white/35 bg-transparent hover:bg-white/5 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
               <Play size={15} fill="currentColor" />
               View Our Work
             </button>
           </motion.div>
 
           {/* Inline Social Proof Validation */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="mt-8 flex items-center gap-2 text-slate-500 font-medium text-xs md:text-sm tracking-wide"
+            className="mt-8 flex items-center gap-2 text-slate-400 font-medium text-xs md:text-sm tracking-wide"
           >
-            <CheckCircle2 size={15} className="text-emerald-500/80" />
+            <Shield size={15} className="text-blue-500" />
             Trusted by Hospitals, Clinics & Healthcare Organizations
+          </motion.div>
+
+          {/* Features Row — aligned under left content */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="mt-10 w-full border-t border-white/5 pt-8 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6"
+          >
+            <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
+              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+                <Users size={16} />
+              </div>
+              <div>
+                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Scalable Solutions</h3>
+                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">Built to grow with your organization.</p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
+              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+                <Shield size={16} />
+              </div>
+              <div>
+                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Secure & Compliant</h3>
+                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">HIPAA-ready & data privacy focused.</p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
+              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+                <Zap size={16} />
+              </div>
+              <div>
+                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Operational Efficiency</h3>
+                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">Automate workflows & reduce workload.</p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
+              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+                <Activity size={16} />
+              </div>
+              <div>
+                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Better Patient Care</h3>
+                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">Deliver seamless digital experiences.</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
 
         {/* Right Side: Re-imagined 3D Interactive Parallax Chassis Dashboard */}
-        <div className="lg:col-span-6 relative flex justify-center items-center w-full min-h-[480px] lg:min-h-[520px]">
+        <div className="lg:col-span-6 relative flex justify-center items-center w-full min-h-[580px] lg:min-h-[640px]">
           {/* Base Layer: Main Application Frame Workspace */}
           <motion.div
             style={{ 
@@ -328,57 +395,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom Features Row Grid Frame (4-Column Layout Layout) */}
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="mx-auto w-full max-w-screen-2xl px-6 md:px-16 mt-16 lg:mt-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 border-t border-white/5 pt-10"
-      >
-        {/* Metric Attribute Component 1 */}
-        <motion.div variants={itemVariants} className="flex gap-4 items-start group cursor-pointer">
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
-            <Users size={18} />
-          </div>
-          <div>
-            <h3 className="text-sm font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Scalable Solutions</h3>
-            <p className="text-xs text-slate-400 mt-1.5 leading-relaxed font-normal">Built to grow dynamically with your healthcare organization.</p>
-          </div>
-        </motion.div>
-
-        {/* Metric Attribute Component 2 */}
-        <motion.div variants={itemVariants} className="flex gap-4 items-start group cursor-pointer">
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
-            <Shield size={18} />
-          </div>
-          <div>
-            <h3 className="text-sm font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Secure & Compliant</h3>
-            <p className="text-xs text-slate-400 mt-1.5 leading-relaxed font-normal">HIPAA-ready engineering and deep privacy-focused frameworks.</p>
-          </div>
-        </motion.div>
-
-        {/* Metric Attribute Component 3 */}
-        <motion.div variants={itemVariants} className="flex gap-4 items-start group cursor-pointer">
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
-            <Zap size={18} />
-          </div>
-          <div>
-            <h3 className="text-sm font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Operational Efficiency</h3>
-            <p className="text-xs text-slate-400 mt-1.5 leading-relaxed font-normal">Automate intricate medical workflows to eliminate administrative load.</p>
-          </div>
-        </motion.div>
-
-        {/* Metric Attribute Component 4 */}
-        <motion.div variants={itemVariants} className="flex gap-4 items-start group cursor-pointer">
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
-            <Activity size={18} />
-          </div>
-          <div>
-            <h3 className="text-sm font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Better Patient Care</h3>
-            <p className="text-xs text-slate-400 mt-1.5 leading-relaxed font-normal">Deliver continuous, frictionless digital interactions for patients.</p>
-          </div>
-        </motion.div>
-      </motion.div>
 
     </section>
   );
