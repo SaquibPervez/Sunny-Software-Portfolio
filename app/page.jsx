@@ -1,9 +1,9 @@
-import HeroModern from "@/app/components/HeroSection";
-import Marquee from "@/app/components/Marquee";
-import Services from "@/app/components/Services";
-import Projects from "@/app/components/Projects";
-import OurProcess from "@/app/components/OurProcess";
-import Testimonials from "@/app/components/Testimonials";
+import HeroModern from "./components/HeroSection";
+import Marquee from "./components/Marquee";
+import Services from "./components/Services";
+import Projects from "./components/Projects";
+import OurProcess from "./components/OurProcess";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
