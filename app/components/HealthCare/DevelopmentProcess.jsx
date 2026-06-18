@@ -25,7 +25,7 @@ const steps = [
       "Identify key features & requirements",
       "Define goals, timelines & deliverables",
     ],
-    img: "/process/requirement.png",
+    img: "/process/req.png",
   },
   {
     num: "02",
@@ -231,7 +231,6 @@ export default function DevelopmentProcess() {
                         onError={() => {}}
                       />
                       {/* Fallback icon shown behind image */}
-                      <Icon size={32} className={`${step.iconColor} opacity-20`} />
                     </div>
                   </div>
                 </motion.div>

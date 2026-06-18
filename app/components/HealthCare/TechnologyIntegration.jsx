@@ -41,9 +41,9 @@ const categories = [
     labelColor: "text-green-400",
     Icon: Server,
     items: [
-      { name: "Node.js", img: "/tec/nodejs.png" },
-      { name: "Laravel", img: "/tec/laravel.png" },
-      { name: "Django",  img: "/tec/django.png" },
+      { name: "Node.js", img: "/tec/node.webp" },
+      { name: "Laravel", img: "/tec/laravel.svg" },
+      { name: "Django",  img: "/tec/dj.png" },
     ],
   },
   {
@@ -55,7 +55,7 @@ const categories = [
     Icon: Smartphone,
     items: [
       { name: "Flutter",       img: "/tec/flutter.png" },
-      { name: "React Native",  img: "/tec/reactnative.png" },
+      { name: "React Native",  img: "/tec/react.png" },
     ],
   },
   {

@@ -2,13 +2,13 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import Image from "next/image";
 import {
   Building2, Stethoscope, Pill, FlaskConical, Rocket,
-  FileText, Calendar, BarChart2, Shield, Users, Activity,
-  ClipboardList, Clock, Database, Package, Zap, Code2,
-  CreditCard, MessageSquare, Microscope, TestTube2,
-  BookOpen, Cpu, GitMerge, TrendingUp, AlertCircle,
-  ArrowRight, CheckCircle2,
+  FileText, Calendar, BarChart2, Shield, Users,
+  ClipboardList, Database, Package, Zap, Code2,
+  CreditCard, GitMerge, TrendingUp, AlertCircle,
+  ArrowRight, CheckCircle2, Microscope, TestTube2, Cpu,
 } from "lucide-react";
 
 const tabs = [
@@ -16,7 +16,8 @@ const tabs = [
     id: "hospitals",
     label: "Hospitals",
     Icon: Building2,
-    visualIcons: [Users, Activity, BarChart2, Shield, FileText, Calendar],
+    challengeImg: "/industry/hos.png",
+    solutionImg: "/industry/hospital-solution.png",
     challenges: [
       "Overwhelmed medical staffs",
       "Disconnected Data Silos",
@@ -41,7 +42,8 @@ const tabs = [
     id: "clinics",
     label: "Clinics",
     Icon: Stethoscope,
-    visualIcons: [Users, ClipboardList, Clock, MessageSquare, Calendar, Activity],
+    challengeImg: "/industry/clinic.png",
+    solutionImg: "/industry/clinic-solution.png",
     challenges: [
       "Patient Queue Bottlenecks",
       "Manual Appointment Tracking",
@@ -66,7 +68,8 @@ const tabs = [
     id: "pharmacies",
     label: "Pharmacies",
     Icon: Pill,
-    visualIcons: [Package, Database, Shield, TrendingUp, FileText, ClipboardList],
+    challengeImg: "/industry/pharmacy.png",
+    solutionImg: "/industry/pharmacy-solution.png",
     challenges: [
       "Inventory Stockouts",
       "Prescription Errors",
@@ -91,7 +94,8 @@ const tabs = [
     id: "labs",
     label: "Diagnostic Labs",
     Icon: FlaskConical,
-    visualIcons: [TestTube2, Microscope, BarChart2, FileText, Clock, Shield],
+    challengeImg: "/industry/lab.png",
+    solutionImg: "/industry/lab-solution.png",
     challenges: [
       "Manual Report Processing",
       "Long Turnaround Times",
@@ -116,7 +120,8 @@ const tabs = [
     id: "startups",
     label: "Healthcare Startups",
     Icon: Rocket,
-    visualIcons: [Rocket, Code2, GitMerge, Zap, TrendingUp, Cpu],
+    challengeImg: "/industry/startup.png",
+    solutionImg: "/industry/startup-solution.png",
     challenges: [
       "Scalability Limitations",
       "Regulatory Uncertainty",
@@ -144,26 +149,6 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
 };
 
-function MiniVisual({ icons, accent }) {
-  return (
-    <div className="w-full h-[120px] rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-center p-3 relative overflow-hidden">
-      <div className={`absolute inset-0 ${accent} opacity-5 rounded-xl`} />
-      <div className="grid grid-cols-3 gap-2">
-        {icons.slice(0, 6).map((Icon, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.07, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center"
-          >
-            <Icon size={14} className="text-slate-400" />
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function IndustryUseCases() {
   const [activeTab, setActiveTab] = useState("hospitals");
@@ -240,7 +225,15 @@ export default function IndustryUseCases() {
           >
             {/* Col 1 — Key Challenges */}
             <div className="flex flex-col gap-4">
-              <MiniVisual icons={current.visualIcons} accent="bg-blue-500" />
+              <div className="relative w-full h-36 rounded-xl overflow-hidden border border-white/5 bg-white/[0.02]">
+                <Image
+                  src={current.challengeImg}
+                  alt={`${current.label} challenges`}
+                  fill
+                  className="object-cover"
+                  onError={() => {}}
+                />
+              </div>
               <div>
                 <p className="text-sm font-bold text-blue-400 mb-3">
                   Key Challenges in {current.label}
@@ -258,7 +251,15 @@ export default function IndustryUseCases() {
 
             {/* Col 2 — How We Solve */}
             <div className="flex flex-col gap-4">
-              <MiniVisual icons={[...current.visualIcons].reverse()} accent="bg-indigo-500" />
+              <div className="relative w-full h-36 rounded-xl overflow-hidden border border-white/5 bg-white/[0.02]">
+                <Image
+                  src={current.solutionImg}
+                  alt={`${current.label} solution`}
+                  fill
+                  className="object-cover"
+                  onError={() => {}}
+                />
+              </div>
               <div>
                 <p className="text-sm font-bold text-white mb-2">How Our System Solves Them</p>
                 <p className="text-xs text-slate-400 leading-relaxed mb-3">

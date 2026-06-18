@@ -10,7 +10,7 @@ import {
 const capabilities = [
   {
     num: "01",
-    img: "/breakdown/crm.png",
+    img: "/breakdown/crm2.png",
     Icon: Users,
     accent: "blue",
     iconBg: "bg-blue-500/10",
@@ -170,7 +170,6 @@ export default function DetailedCapabilityBreakdown() {
                       />
                       {/* Fallback gradient + icon when image missing */}
                       <div className={`absolute inset-0 ${cap.iconBg} flex items-center justify-center`}>
-                        <Icon size={48} className={`${cap.iconColor} opacity-20`} />
                       </div>
                     </div>
 
