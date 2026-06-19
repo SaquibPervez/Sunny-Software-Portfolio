@@ -175,7 +175,7 @@ export default function Hero() {
             className="mt-10 w-full border-t border-white/5 pt-8 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6"
           >
             <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
-              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+              <div className="w-9 h-9 ml-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
                 <Users size={16} />
               </div>
               <div>
@@ -185,7 +185,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
-              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+              <div className="w-9 h-9  ml-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
                 <Shield size={16} />
               </div>
               <div>
@@ -195,7 +195,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
-              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+              <div className="w-9 h-9  ml-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
                 <Zap size={16} />
               </div>
               <div>
@@ -205,7 +205,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col gap-2 group cursor-pointer">
-              <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
+              <div className="w-9 h-9  ml-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40 transition-all duration-300 shrink-0">
                 <Activity size={16} />
               </div>
               <div>

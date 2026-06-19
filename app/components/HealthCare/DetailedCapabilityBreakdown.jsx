@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   Users, Shield, Lock, Calendar, Cloud, CheckCircle2, Layers,
@@ -86,7 +85,7 @@ const capabilities = [
   },
   {
     num: "05",
-    img: "/breakdown/emr.png",
+    img: "/breakdown/ehr.png",
     Icon: Cloud,
     accent: "cyan",
     iconBg: "bg-cyan-500/10",
@@ -106,37 +105,28 @@ const capabilities = [
 ];
 
 export default function DetailedCapabilityBreakdown() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
-      {/* Background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none" />
-
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col gap-16">
-
-        {/* ── Header ── */}
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center"
-        >
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">
+          className="text-center">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Detailed Capabilities
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
             Detailed Capability Breakdown
           </h2>
           <p className="mt-4 text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Deep-dive into the core systems we build — engineered for security, scale, and clinical excellence.
+            Deep-dive into the core systems we build engineered for security, scale, and clinical excellence.
           </p>
         </motion.div>
-
-        {/* ── Capability Rows ── */}
         <div className="flex flex-col gap-12 lg:gap-20">
           {capabilities.map((cap, i) => {
             const Icon = cap.Icon;
@@ -145,20 +135,15 @@ export default function DetailedCapabilityBreakdown() {
             return (
               <div
                 key={cap.num}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center`}
-              >
-                {/* Image block */}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center`}>
                 <motion.div
                   initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-                  className={`relative ${!isLeft ? "lg:order-2" : ""}`}
-                >
-                  {/* Glow behind image */}
+                  className={`relative ${!isLeft ? "lg:order-2" : ""}`}>
                   <div className={`absolute inset-0 ${cap.glowColor} rounded-3xl blur-3xl scale-90 pointer-events-none`} />
 
-                  {/* Image container */}
                   <div className={`relative rounded-2xl border ${cap.iconBorder} overflow-hidden bg-white/[0.02] shadow-2xl shadow-black/40`}>
                     <div className="relative w-full aspect-[4/3]">
                       <Image
@@ -168,27 +153,21 @@ export default function DetailedCapabilityBreakdown() {
                         className="object-cover"
                         onError={() => {}}
                       />
-                      {/* Fallback gradient + icon when image missing */}
                       <div className={`absolute inset-0 ${cap.iconBg} flex items-center justify-center`}>
                       </div>
                     </div>
 
-                    {/* Step number badge overlay */}
                     <div className={`absolute top-3 left-3 ${cap.iconBg} border ${cap.iconBorder} backdrop-blur-sm px-2.5 py-1 rounded-lg`}>
                       <span className={`text-xs font-black ${cap.numColor} tracking-widest`}>{cap.num}</span>
                     </div>
                   </div>
                 </motion.div>
-
-                {/* Text block */}
                 <motion.div
-                  initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.75, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className={`flex flex-col gap-5 ${!isLeft ? "lg:order-1" : ""}`}
-                >
-                  {/* Icon + Title */}
+                  initial={{ opacity:0, x: isLeft ?50 : -50 }}
+                  whileInView={{ opacity:1, x:0 }}
+                  viewport={{ once:true, margin: "-80px" }}
+                  transition={{ duration:0.75, delay:0.1, ease:[0.16, 1, 0.3, 1] }}
+                  className={`flex flex-col gap-5 ${!isLeft ?"lg:order-1" : ""}`}>
                   <div className="flex flex-col gap-4">
                     <div className={`w-11 h-11 rounded-xl ${cap.iconBg} border ${cap.iconBorder} flex items-center justify-center`}>
                       <Icon size={20} className={cap.iconColor} />
@@ -198,13 +177,9 @@ export default function DetailedCapabilityBreakdown() {
                     </h3>
                     <div className={`w-10 h-[3px] ${cap.iconBg.replace("/10", "")} rounded-full border ${cap.iconBorder}`} />
                   </div>
-
-                  {/* Description */}
                   <p className="text-slate-400 text-sm leading-relaxed">
                     {cap.desc}
                   </p>
-
-                  {/* Bullets */}
                   <ul className="flex flex-col gap-2.5">
                     {cap.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3 text-sm text-slate-300">

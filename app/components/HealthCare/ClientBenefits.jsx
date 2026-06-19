@@ -1,7 +1,5 @@
 "use client";
-
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   BarChart2,
   Clock,
@@ -93,29 +91,18 @@ const stagger = {
 };
 
 export default function ClientBenefits() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section
-      ref={ref}
-      className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden"
-    >
-      {/* Background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
-      {/* Ambient glow */}
+    <section className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden">      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-indigo-600/6 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col gap-14">
-
-        {/* ── Header ── */}
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible" viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           className="text-center max-w-2xl mx-auto"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Client Benefits
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
@@ -123,9 +110,9 @@ export default function ClientBenefits() {
           </h2>
           <p className="mt-5 text-slate-400 text-sm sm:text-base leading-relaxed">
             Our digital solutions are built to{" "}
-            <span className="text-blue-400 font-semibold">simplify operations</span>, improve
+            simplify operations, improve
             patient care, and{" "}
-            <span className="text-blue-400 font-semibold">accelerate growth</span> for
+          accelerate growth for
             healthcare organizations.
           </p>
         </motion.div>
@@ -133,7 +120,7 @@ export default function ClientBenefits() {
         {/* ── Benefits Grid ── */}
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible" viewport={{ once: true, margin: "-80px" }}
           variants={stagger}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
@@ -170,7 +157,7 @@ export default function ClientBenefits() {
         {/* ── Bottom Bar ── */}
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible" viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           className="bg-white/[0.03] border border-white/5 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-0"
         >

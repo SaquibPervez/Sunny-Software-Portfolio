@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   ClipboardList, Network, Layers, Code2, ShieldCheck, CloudUpload,
@@ -137,28 +136,20 @@ const stagger = {
 };
 
 export default function DevelopmentProcess() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section
-      ref={ref}
-      className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden"
-    >
-      {/* Background grid */}
+    <section className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-14">
 
-        {/* ── Header ── */}
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible" viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           className="text-center"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Our Process
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
@@ -166,19 +157,17 @@ export default function DevelopmentProcess() {
           </h2>
           <p className="mt-4 text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             A structured and transparent approach to build secure, scalable, and reliable{" "}
-            <span className="text-blue-400 font-semibold">healthcare software</span> solutions.
+            healthcare software solutions.
           </p>
         </motion.div>
 
-        {/* ── Steps ── */}
         <div className="relative">
 
-          {/* Horizontal dashed connector — desktop only */}
           <div className="hidden lg:block absolute top-[52px] left-[calc(100%/12)] right-[calc(100%/12)] h-px border-t border-dashed border-white/10 z-0" />
 
           <motion.div
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            whileInView="visible" viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-4"
           >
@@ -190,12 +179,10 @@ export default function DevelopmentProcess() {
                   variants={fadeUp}
                   className="flex flex-col gap-4 relative"
                 >
-                  {/* Mobile/tablet: left vertical connector */}
                   {i < steps.length - 1 && (
                     <div className="absolute left-[22px] top-[44px] bottom-[-24px] w-px border-l border-dashed border-white/8 lg:hidden z-0" />
                   )}
 
-                  {/* Circle + Number */}
                   <div className="flex items-center gap-3 lg:flex-col lg:items-center lg:gap-2 relative z-10">
                     <div className={`w-11 h-11 rounded-full ${step.iconBg} border-2 ${step.circleBorder} flex items-center justify-center shrink-0`}>
                       <Icon size={20} className={step.iconColor} />
@@ -204,14 +191,11 @@ export default function DevelopmentProcess() {
                     <span className={`text-[10px] font-black ${step.numColor} hidden lg:block tracking-widest`}>{step.num}</span>
                   </div>
 
-                  {/* Card */}
                   <div className="bg-white/[0.03] hover:bg-white/[0.055] border border-white/5 hover:border-white/10 rounded-2xl p-4 flex flex-col gap-3 transition-colors duration-300 flex-1 ml-6 lg:ml-0">
-                    {/* Title */}
                     <h3 className={`text-xs font-bold ${step.titleColor} leading-snug whitespace-pre-line`}>
                       {step.title}
                     </h3>
 
-                    {/* Bullets */}
                     <ul className="flex flex-col gap-1.5">
                       {step.bullets.map((b) => (
                         <li key={b} className="flex items-start gap-1.5 text-[11px] text-slate-400 leading-snug">
@@ -220,8 +204,6 @@ export default function DevelopmentProcess() {
                         </li>
                       ))}
                     </ul>
-
-                    {/* Image slot */}
                     <div className={`w-full h-[90px] rounded-xl ${step.iconBg} border ${step.iconBorder} overflow-hidden flex items-center justify-center mt-auto relative`}>
                       <Image
                         src={step.img}
@@ -230,7 +212,6 @@ export default function DevelopmentProcess() {
                         className="object-contain p-2"
                         onError={() => {}}
                       />
-                      {/* Fallback icon shown behind image */}
                     </div>
                   </div>
                 </motion.div>
@@ -239,10 +220,9 @@ export default function DevelopmentProcess() {
           </motion.div>
         </div>
 
-        {/* ── Bottom Bar ── */}
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible" viewport={{ once: true, margin: "-80px" }}
           variants={stagger}
           className="grid grid-cols-2 lg:grid-cols-4 gap-4"
         >

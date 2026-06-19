@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Building2,
   ClipboardList,
@@ -87,7 +86,6 @@ const containerVariants = {
     transition: { staggerChildren: 0.08, delayChildren: 0.1 },
   },
 };
-
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
@@ -96,10 +94,7 @@ const cardVariants = {
     transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
   },
 };
-
 export default function CoreHealthcareSolutions() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
@@ -107,13 +102,11 @@ export default function CoreHealthcareSolutions() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center mb-12"
-        >
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">What We Build</p>
+          className="text-center mb-12">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">What We Build</p>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
             Core Healthcare Solutions
           </h2>
@@ -121,14 +114,11 @@ export default function CoreHealthcareSolutions() {
             We design and develop scalable healthcare systems that improve hospital operations, patient experience, and digital workflows.
           </p>
         </motion.div>
-
-        {/* Cards Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
-        >
+          whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {solutions.map((item) => {
             const Icon = item.icon;
             return (
@@ -137,14 +127,10 @@ export default function CoreHealthcareSolutions() {
                 variants={cardVariants}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.22 }}
-                className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-white/10 rounded-2xl p-6 flex flex-col gap-4 cursor-pointer transition-colors duration-300"
-              >
-                {/* Icon */}
+                className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-white/10 rounded-2xl p-6 flex flex-col gap-4 cursor-pointer transition-colors duration-300">
                 <div className={`w-10 h-10 rounded-xl ${item.iconBg} border border-white/10 flex items-center justify-center shrink-0 transition-all duration-300 ${item.accentColor}`}>
                   <Icon size={18} className={item.iconColor} />
                 </div>
-
-                {/* Text */}
                 <div className="flex flex-col gap-2 flex-1">
                   <h3 className="text-sm font-bold text-white leading-snug group-hover:text-blue-400 transition-colors duration-300">
                     {item.title}
@@ -153,8 +139,6 @@ export default function CoreHealthcareSolutions() {
                     {item.description}
                   </p>
                 </div>
-
-                {/* Learn More */}
                 <div className="flex items-center gap-1 text-blue-500 text-xs font-semibold group-hover:gap-2 transition-all duration-200">
                   Learn More
                   <ArrowRight size={13} />

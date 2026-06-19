@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import {
   Building2, Stethoscope, Pill, FlaskConical, Rocket,
@@ -42,8 +42,8 @@ const tabs = [
     id: "clinics",
     label: "Clinics",
     Icon: Stethoscope,
-    challengeImg: "/industry/clinic.png",
-    solutionImg: "/industry/clinic-solution.png",
+    challengeImg: "/industry/hos.png",
+    solutionImg: "/industry/hospital-solution.png",
     challenges: [
       "Patient Queue Bottlenecks",
       "Manual Appointment Tracking",
@@ -68,8 +68,8 @@ const tabs = [
     id: "pharmacies",
     label: "Pharmacies",
     Icon: Pill,
-    challengeImg: "/industry/pharmacy.png",
-    solutionImg: "/industry/pharmacy-solution.png",
+    challengeImg: "/industry/hos.png",
+    solutionImg: "/industry/hospital-solution.png",
     challenges: [
       "Inventory Stockouts",
       "Prescription Errors",
@@ -94,8 +94,8 @@ const tabs = [
     id: "labs",
     label: "Diagnostic Labs",
     Icon: FlaskConical,
-    challengeImg: "/industry/lab.png",
-    solutionImg: "/industry/lab-solution.png",
+    challengeImg: "/industry/hos.png",
+    solutionImg: "/industry/hospital-solution.png",
     challenges: [
       "Manual Report Processing",
       "Long Turnaround Times",
@@ -120,8 +120,8 @@ const tabs = [
     id: "startups",
     label: "Healthcare Startups",
     Icon: Rocket,
-    challengeImg: "/industry/startup.png",
-    solutionImg: "/industry/startup-solution.png",
+    challengeImg: "/industry/hos.png",
+    solutionImg: "/industry/hospital-solution.png",
     challenges: [
       "Scalability Limitations",
       "Regulatory Uncertainty",
@@ -152,30 +152,22 @@ const fadeUp = {
 
 export default function IndustryUseCases() {
   const [activeTab, setActiveTab] = useState("hospitals");
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   const current = tabs.find((t) => t.id === activeTab);
 
   return (
-    <section
-      ref={ref}
-      className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden"
-    >
-      {/* Background grid */}
+    <section className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-indigo-600/5 rounded-full blur-[140px] pointer-events-none" />
-
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col gap-10">
-
-        {/* ── Header ── */}
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           className="text-center"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Industry Use Cases
           </p>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
@@ -186,12 +178,12 @@ export default function IndustryUseCases() {
           </p>
         </motion.div>
 
-        {/* ── Tab Bar ── */}
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
-          className="flex flex-wrap gap-2 justify-center sm:justify-start"
+          className="flex flex-wrap gap-2 justify-center"
         >
           {tabs.map((tab) => {
             const Icon = tab.Icon;
@@ -213,7 +205,6 @@ export default function IndustryUseCases() {
           })}
         </motion.div>
 
-        {/* ── Content Panel ── */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -223,7 +214,6 @@ export default function IndustryUseCases() {
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="bg-white/[0.03] border border-white/5 rounded-2xl p-5 sm:p-7 grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {/* Col 1 — Key Challenges */}
             <div className="flex flex-col gap-4">
               <div className="relative w-full h-36 rounded-xl overflow-hidden border border-white/5 bg-white/[0.02]">
                 <Image
@@ -249,7 +239,6 @@ export default function IndustryUseCases() {
               </div>
             </div>
 
-            {/* Col 2 — How We Solve */}
             <div className="flex flex-col gap-4">
               <div className="relative w-full h-36 rounded-xl overflow-hidden border border-white/5 bg-white/[0.02]">
                 <Image
@@ -276,7 +265,6 @@ export default function IndustryUseCases() {
               </div>
             </div>
 
-            {/* Col 3 — Feature Cards */}
             <div className="flex flex-col gap-3">
               {current.features.map((f) => {
                 const Icon = f.Icon;

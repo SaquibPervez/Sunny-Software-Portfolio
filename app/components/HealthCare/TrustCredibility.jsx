@@ -1,6 +1,5 @@
 "use client";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import {Shield,Users,Award,Headphones,Globe,CheckCircle2,Heart,Handshake,Building2,} from "lucide-react";
 
@@ -38,13 +37,13 @@ const stats = [
 ];
 
 const logos = [
-  { name: "Apollo Hospitals", file: "apollo.png" },
-  { name: "MAX Healthcare", file: "max.png" },
-  { name: "Manipal Hospitals", file: "manipal.png" },
-  { name: "Fortis", file: "fortis.png" },
-  { name: "Medanta", file: "medanta.png" },
-  { name: "CARE Hospitals", file: "carehos.png" },
-  { name: "Global Hospitals", file: "global.png" },
+  { name:"Apollo Hospitals", file: "hosapollo.png" },
+  { name:"MAX Healthcare", file:"mxcare.png" },
+  { name: "Manipal Hospitals", file:"manipalhos.png" },
+  { name:"Fortis",file:"for.png" },
+  { name:"Medanta", file: "med.png" },
+  { name:"CARE Hospitals", file:"hoscare.png" },
+  { name:"Global Hospitals",file:"hos.png" },
 ];
 
 const certifications = [
@@ -94,24 +93,21 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 };
 
-export default function TrustCredibility() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+const vp = { once:true, margin:"-80px" };
 
+export default function TrustCredibility() {
   return (
-    <section
-      ref={ref}
-      className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
+    <section className="w-full bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-blue-600/6 rounded-full blur-[140px] pointer-events-none" />
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col gap-14">
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={vp}
           variants={fadeUp}
           className="text-center">
           <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
-            <Shield size={12} />
             Trusted by Healthcare Leaders
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
@@ -124,7 +120,8 @@ export default function TrustCredibility() {
 
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={vp}
           variants={stagger}
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {stats.map((s) => {
@@ -133,8 +130,7 @@ export default function TrustCredibility() {
               <motion.div
                 key={s.label}
                 variants={fadeUp}
-                className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-white/10 rounded-2xl p-5 flex flex-col gap-3 transition-colors duration-300"
-              >
+                className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-white/10 rounded-2xl p-5 flex flex-col gap-3 transition-colors duration-300">
                 <div className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/15 flex items-center justify-center text-blue-400">
                   <Icon size={16} />
                 </div>
@@ -150,7 +146,8 @@ export default function TrustCredibility() {
 
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={vp}
           variants={fadeUp}
           className="bg-white/[0.03] border border-white/5 rounded-2xl px-6 py-6">
           <p className="text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-6 flex items-center justify-center gap-2">
@@ -183,7 +180,8 @@ export default function TrustCredibility() {
 
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={vp}
           variants={stagger}
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {certifications.map((c) => {
@@ -207,7 +205,8 @@ export default function TrustCredibility() {
 
         <motion.div
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={vp}
           variants={fadeUp}
           className="flex items-center justify-center gap-3 border-t border-white/5 pt-8">
           <span className="w-8 h-px bg-blue-500/40" />
