@@ -106,7 +106,7 @@ export default function HeroModern() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg md:text-medium text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Sunny Software Inc. transforms complex problems into elegant, scalable
           solutions using cutting-edge AI and Web Technologies.

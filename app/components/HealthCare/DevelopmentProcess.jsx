@@ -149,13 +149,13 @@ export default function DevelopmentProcess() {
           variants={fadeUp}
           className="text-center"
         >
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Our Process
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+          <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
             Our Development Process
           </h2>
-          <p className="mt-4 text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-slate-400 text-sm max-w-2xl mx-auto leading-relaxed">
             A structured and transparent approach to build secure, scalable, and reliable{" "}
             healthcare software solutions.
           </p>
@@ -192,13 +192,13 @@ export default function DevelopmentProcess() {
                   </div>
 
                   <div className="bg-white/[0.03] hover:bg-white/[0.055] border border-white/5 hover:border-white/10 rounded-2xl p-4 flex flex-col gap-3 transition-colors duration-300 flex-1 ml-6 lg:ml-0">
-                    <h3 className={`text-xs font-bold ${step.titleColor} leading-snug whitespace-pre-line`}>
+                    <h3 className={`text-xs font-semibold ${step.titleColor} leading-snug whitespace-pre-line`}>
                       {step.title}
                     </h3>
 
                     <ul className="flex flex-col gap-1.5">
                       {step.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-1.5 text-[11px] text-slate-400 leading-snug">
+                        <li key={b} className="flex items-start gap-1.5 text-[10px] text-slate-400 leading-snug">
                           <span className={`mt-1.5 w-1 h-1 rounded-full ${step.iconBg.replace("/10", "/60")} shrink-0 border ${step.iconBorder}`} />
                           {b}
                         </li>
@@ -239,7 +239,7 @@ export default function DevelopmentProcess() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-blue-400">{b.title}</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">{b.desc}</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5 leading-snug">{b.desc}</p>
                 </div>
               </motion.div>
             );

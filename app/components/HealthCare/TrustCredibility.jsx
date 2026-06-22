@@ -107,13 +107,13 @@ export default function TrustCredibility() {
           viewport={vp}
           variants={fadeUp}
           className="text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+          <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Trusted by Healthcare Leaders
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+          <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
             Trusted by Hospitals, Clinics &<br className="hidden sm:block" /> Healthcare Organizations
           </h2>
-          <p className="mt-4 text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-slate-400 text-sm sm:text-sm max-w-xl mx-auto leading-relaxed">
             Delivering secure, scalable and next-generation healthcare software solutions that organizations rely on.
           </p>
         </motion.div>
@@ -136,8 +136,8 @@ export default function TrustCredibility() {
                 </div>
                 <div>
                   <p className="text-2xl font-black text-white tracking-tight">{s.value}</p>
-                  <p className="text-xs font-bold text-white/80 mt-0.5">{s.label}</p>
-                  <p className="text-[11px] text-slate-500 mt-1 leading-snug">{s.sub}</p>
+                  <p className="text-sm font-semibold text-white/80 mt-0.5">{s.label}</p>
+                  <p className="text-[10px] text-slate-500 mt-1 leading-snug">{s.sub}</p>
                 </div>
               </motion.div>
             );
@@ -195,8 +195,8 @@ export default function TrustCredibility() {
                   <Icon size={16} className={c.color} />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-white leading-snug">{c.title}</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">{c.desc}</p>
+                  <p className="text-xs font-semibold text-white leading-snug">{c.title}</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5 leading-snug">{c.desc}</p>
                 </div>
               </motion.div>
             );

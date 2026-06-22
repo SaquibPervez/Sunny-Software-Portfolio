@@ -1,5 +1,72 @@
 @import "tailwindcss";
 
+/* ── Kelantis (Primary) ── */
+@font-face {
+  font-family: 'Kelantis';
+  src: url('/font/kelantis-font/KelantisDEMO-Regular-BF69d8edb42e4c4.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── GC Akihiko (Secondary) — all weights ── */
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-Thin-BF69e09758787bf.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-ExtraLight-BF69e097582a1fc.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-Light-BF69e097584be86.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-Regular-BF69e0975868fd8.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-Medium-BF69e097585a8e8.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-SemiBold-BF69e097583a507.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-Bold-BF69e09757d1553.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GCAkihiko';
+  src: url('/font/gc-akihiko-font/GCAkihikoDemo-ExtraBold-BF69e097580747d.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -8,8 +75,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Kelantis', ui-sans-serif, sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-primary: 'Kelantis', sans-serif;
+  --font-secondary: 'GCAkihiko', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,15 +91,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Kelantis', Arial, sans-serif;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Prevent accidental horizontal scroll due to wide/animated elements */
 html, body {
   max-width: 100%;
   overflow-x: hidden;

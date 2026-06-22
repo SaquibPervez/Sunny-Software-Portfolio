@@ -106,11 +106,11 @@ export default function CoreHealthcareSolutions() {
           whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12">
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">What We Build</p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">What We Build</p>
+          <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight">
             Core Healthcare Solutions
           </h2>
-          <p className="mt-4 text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-slate-400 text-sm  max-w-xl mx-auto leading-relaxed">
             We design and develop scalable healthcare systems that improve hospital operations, patient experience, and digital workflows.
           </p>
         </motion.div>
@@ -132,14 +132,14 @@ export default function CoreHealthcareSolutions() {
                   <Icon size={18} className={item.iconColor} />
                 </div>
                 <div className="flex flex-col gap-2 flex-1">
-                  <h3 className="text-sm font-bold text-white leading-snug group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-sm font-semibold text-white leading-snug group-hover:text-blue-400 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-[10px] text-slate-400 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
-                <div className="flex items-center gap-1 text-blue-500 text-xs font-semibold group-hover:gap-2 transition-all duration-200">
+                <div className="flex items-center gap-1 text-blue-500 text-[9px] font-semibold group-hover:gap-2 transition-all duration-200">
                   Learn More
                   <ArrowRight size={13} />
                 </div>

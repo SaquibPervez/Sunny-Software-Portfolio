@@ -9,7 +9,7 @@ import {
 const capabilities = [
   {
     num: "01",
-    img: "/breakdown/crm2.png",
+    img: "/breakdown/crm_3.png",
     Icon: Users,
     accent: "blue",
     iconBg: "bg-blue-500/10",
@@ -28,7 +28,7 @@ const capabilities = [
   },
   {
     num: "02",
-    img: "/breakdown/patientdata.png",
+    img: "/breakdown/4.png",
     Icon: Shield,
     accent: "amber",
     iconBg: "bg-amber-500/10",
@@ -47,7 +47,7 @@ const capabilities = [
   },
   {
     num: "03",
-    img: "/breakdown/rbac.png",
+    img: "/breakdown/2.png",
     Icon: Lock,
     accent: "teal",
     iconBg: "bg-teal-500/10",
@@ -66,7 +66,7 @@ const capabilities = [
   },
   {
     num: "04",
-    img: "/breakdown/scheduling.png",
+    img: "/breakdown/3.png",
     Icon: Calendar,
     accent: "indigo",
     iconBg: "bg-indigo-500/10",
@@ -85,7 +85,7 @@ const capabilities = [
   },
   {
     num: "05",
-    img: "/breakdown/ehr.png",
+    img: "/breakdown/ehr_1.png",
     Icon: Cloud,
     accent: "cyan",
     iconBg: "bg-cyan-500/10",
@@ -120,10 +120,10 @@ export default function DetailedCapabilityBreakdown() {
           <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Detailed Capabilities
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+          <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
             Detailed Capability Breakdown
           </h2>
-          <p className="mt-4 text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-slate-400 text-sm sm:text-sm max-w-xl mx-auto leading-relaxed">
             Deep-dive into the core systems we build engineered for security, scale, and clinical excellence.
           </p>
         </motion.div>
@@ -172,7 +172,7 @@ export default function DetailedCapabilityBreakdown() {
                     <div className={`w-11 h-11 rounded-xl ${cap.iconBg} border ${cap.iconBorder} flex items-center justify-center`}>
                       <Icon size={20} className={cap.iconColor} />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-black text-white leading-tight uppercase tracking-wide whitespace-pre-line">
+                    <h3 className="font-secondary text-xl sm:text-2xl font-black text-white leading-tight uppercase tracking-wide whitespace-pre-line">
                       {cap.title}
                     </h3>
                     <div className={`w-10 h-[3px] ${cap.iconBg.replace("/10", "")} rounded-full border ${cap.iconBorder}`} />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { 
   Calendar, 
@@ -98,7 +99,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-5 flex items-center gap-2 bg-blue-600/10 border border-blue-500/25 text-blue-400 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full"
+            className="mb-5 flex items-center gap-2 bg-blue-600/10 border border-blue-500/25 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full"
           >
             <Shield size={13} />
             Smart Software. Better Care.
@@ -111,7 +112,7 @@ export default function Hero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(2.2rem,4.8vw,3.5rem)] font-black tracking-normal leading-[1.05]"
+                className="font-secondary text-[clamp(2.2rem,4.8vw,3rem)] font-black tracking-normal leading-[1.05]"
               >
                 Healthcare Software <br />
                 Solutions Built for{" "}
@@ -133,7 +134,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed font-normal"
+              className="text-slate-400 text-medium max-w-xl leading-relaxed font-normal"
             >
               Custom CRM, Patient Management Systems, OPD Platforms, and Enterprise Healthcare Portals designed to streamline operations and improve patient outcomes.
             </motion.p>
@@ -146,11 +147,17 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-700/25 hover:scale-[1.02] active:scale-[0.98]">
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-700/25 hover:scale-[1.02] active:scale-[0.98]"
+            >
               <Calendar size={18} />
               Book a Consultation
-            </button>
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/20 hover:border-white/35 bg-transparent hover:bg-white/5 text-white font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
+            </Link>
+            <button
+              onClick={() => document.getElementById("portfolio-showcase")?.scrollIntoView({ behavior: "smooth" })}
+              className="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/20 hover:border-white/35 bg-transparent hover:bg-white/5 text-white text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+            >
               <Play size={15} fill="currentColor" />
               View Our Work
             </button>
@@ -161,7 +168,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="mt-8 flex items-center gap-2 text-slate-400 font-medium text-xs md:text-sm tracking-wide"
+            className="mt-8 flex items-center gap-2 text-slate-400 font-medium text-xs  tracking-wide"
           >
             <Shield size={15} className="text-blue-500" />
             Trusted by Hospitals, Clinics & Healthcare Organizations
@@ -179,8 +186,8 @@ export default function Hero() {
                 <Users size={16} />
               </div>
               <div>
-                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Scalable Solutions</h3>
-                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">Built to grow with your organization.</p>
+                <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Scalable Solutions</h3>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Built to grow with your organization.</p>
               </div>
             </motion.div>
 
@@ -189,8 +196,8 @@ export default function Hero() {
                 <Shield size={16} />
               </div>
               <div>
-                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Secure & Compliant</h3>
-                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">HIPAA-ready & data privacy focused.</p>
+                <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Secure & Compliant</h3>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">HIPAA-ready & data privacy focused.</p>
               </div>
             </motion.div>
 
@@ -199,8 +206,8 @@ export default function Hero() {
                 <Zap size={16} />
               </div>
               <div>
-                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Operational Efficiency</h3>
-                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">Automate workflows & reduce workload.</p>
+                <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Operational Efficiency</h3>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Automate workflows & reduce workload.</p>
               </div>
             </motion.div>
 
@@ -209,8 +216,8 @@ export default function Hero() {
                 <Activity size={16} />
               </div>
               <div>
-                <h3 className="text-xs font-bold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Better Patient Care</h3>
-                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed font-normal">Deliver seamless digital experiences.</p>
+                <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Better Patient Care</h3>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Deliver seamless digital experiences.</p>
               </div>
             </motion.div>
           </motion.div>

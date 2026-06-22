@@ -170,10 +170,10 @@ export default function IndustryUseCases() {
           <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Industry Use Cases
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+          <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
             Industry Use Cases
           </h2>
-          <p className="mt-4 text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
             Identify your specific healthcare segment and explore tailored solutions.
           </p>
         </motion.div>
@@ -225,7 +225,7 @@ export default function IndustryUseCases() {
                 />
               </div>
               <div>
-                <p className="text-sm font-bold text-blue-400 mb-3">
+                <p className="text-[16px] font-semibold text-blue-400 mb-3">
                   Key Challenges in {current.label}
                 </p>
                 <ul className="flex flex-col gap-2">
@@ -250,7 +250,7 @@ export default function IndustryUseCases() {
                 />
               </div>
               <div>
-                <p className="text-sm font-bold text-white mb-2">How Our System Solves Them</p>
+                <p className="text-[16px] font-semibold text-white mb-2">How Our System Solves Them</p>
                 <p className="text-xs text-slate-400 leading-relaxed mb-3">
                   {current.solutionTitle}
                 </p>
@@ -278,7 +278,7 @@ export default function IndustryUseCases() {
                     <div className={`w-9 h-9 rounded-xl ${f.iconBg} border border-white/5 flex items-center justify-center shrink-0`}>
                       <Icon size={16} className={f.iconColor} />
                     </div>
-                    <span className="text-xs font-semibold text-slate-300 group-hover:text-white transition-colors leading-snug">
+                    <span className="text-xs font-medium text-slate-300 group-hover:text-white transition-colors leading-snug">
                       {f.label}
                     </span>
                     <ArrowRight size={13} className="text-slate-600 group-hover:text-slate-400 ml-auto transition-colors" />

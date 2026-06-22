@@ -44,7 +44,7 @@ export default function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={vp}
               transition={{ duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full"
+              className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full"
             >
               <Shield size={12} />
               Smart Software. Better Care.
@@ -55,7 +55,7 @@ export default function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={vp}
               transition={{ duration: 0.65, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-3xl"
+              className="font-secondary text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-3xl"
             >
               Ready to Transform Your{" "}
               <span className="text-blue-400">Healthcare</span>{" "}
@@ -67,7 +67,7 @@ export default function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={vp}
               transition={{ duration: 0.6, delay: 0.26, ease: [0.16, 1, 0.3, 1] }}
-              className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl"
+              className="text-slate-400 text-sm  leading-relaxed max-w-xl"
             >
               Custom CRM, Patient Management Systems, OPD Platforms, and Enterprise Healthcare Portals designed to streamline operations and improve patient outcomes.
             </motion.p>
@@ -77,18 +77,14 @@ export default function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={vp}
               transition={{ duration: 0.6, delay: 0.34, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto"
+              className="flex  items-center gap-3 w-full sm:w-auto"
             >
-              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/25 hover:scale-[1.02] active:scale-[0.98] text-sm cursor-pointer">
-                <Calendar size={16} />
-                Book a Consultation
-              </button>
+              
               <Link
                 href="/contact"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm"
-              >
-                <Phone size={13} />
-                Contact Us
+className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/25 hover:scale-[1.02] active:scale-[0.98] text-sm cursor-pointer">              
+                 <Calendar size={16} />
+                Book a Consultation
               </Link>
             </motion.div>
 

@@ -102,13 +102,13 @@ export default function ClientBenefits() {
           variants={fadeUp}
           className="text-center max-w-2xl mx-auto"
         >
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Client Benefits
           </p>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+          <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
             Benefits That Drive Better<br className="hidden sm:block" /> Healthcare Outcomes
           </h2>
-          <p className="mt-5 text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="mt-5 text-slate-400 text-sm  leading-relaxed">
             Our digital solutions are built to{" "}
             simplify operations, improve
             patient care, and{" "}
@@ -148,7 +148,7 @@ export default function ClientBenefits() {
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-slate-400 leading-relaxed">{b.desc}</p>
+                <p className="text-xs   text-slate-400 leading-relaxed">{b.desc}</p>
               </motion.div>
             );
           })}
@@ -185,7 +185,7 @@ export default function ClientBenefits() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white">{item.title}</p>
-                    <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">{item.desc}</p>
+                    <p className="text-[10px] text-slate-500 mt-0.5 leading-snug">{item.desc}</p>
                   </div>
                 </div>
               );
