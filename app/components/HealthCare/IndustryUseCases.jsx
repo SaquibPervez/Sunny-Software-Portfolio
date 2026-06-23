@@ -167,7 +167,7 @@ export default function IndustryUseCases() {
           variants={fadeUp}
           className="text-center"
         >
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+          <p className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/80  text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Industry Use Cases
           </p>
           <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
@@ -194,7 +194,7 @@ export default function IndustryUseCases() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold border transition-all duration-250 cursor-pointer ${
                   isActive
-                    ? "bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20"
+                    ? "bg-blue-400 border-blue-500 text-white shadow-lg shadow-blue-600/20"
                     : "bg-white/[0.03] border-white/5 text-slate-400 hover:bg-white/[0.06] hover:text-white hover:border-white/10"
                 }`}
               >

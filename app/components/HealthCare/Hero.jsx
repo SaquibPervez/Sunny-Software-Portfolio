@@ -99,7 +99,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-5 flex items-center gap-2 bg-blue-600/10 border border-blue-500/25 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full"
+            className="mb-5 flex items-center gap-2 bg-white/5 border border-white/10 text-white/80  text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full"
           >
             <Shield size={13} />
             Smart Software. Better Care.
@@ -116,7 +116,7 @@ export default function Hero() {
               >
                 Healthcare Software <br />
                 Solutions Built for{" "}
-                <span className="block text-blue-500">
+                <span className="block text-blue-400">
                   Modern Care Systems
                 </span>
               </motion.h1>
@@ -127,7 +127,7 @@ export default function Hero() {
               initial={{ scaleX: 0, opacity: 0 }}
               animate={{ scaleX: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="w-16 h-[3px] bg-blue-500 rounded-full origin-left"
+              className="w-16 h-[3px] bg-blue-400 rounded-full origin-left"
             />
 
             <motion.p
@@ -149,7 +149,7 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-700/25 hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-600 text-white text-[14px] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-700/25 hover:scale-[1.02] active:scale-[0.98]"
             >
               <Calendar size={18} />
               Book a Consultation

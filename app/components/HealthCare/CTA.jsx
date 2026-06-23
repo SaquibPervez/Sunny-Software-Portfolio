@@ -44,7 +44,7 @@ export default function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={vp}
               transition={{ duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full"
+              className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/80  text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full"
             >
               <Shield size={12} />
               Smart Software. Better Care.

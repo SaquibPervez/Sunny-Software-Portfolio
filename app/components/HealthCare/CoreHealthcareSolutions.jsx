@@ -106,7 +106,7 @@ export default function CoreHealthcareSolutions() {
           whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12">
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">What We Build</p>
+          <p className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/80  text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">What We Build</p>
           <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight">
             Core Healthcare Solutions
           </h2>
@@ -139,7 +139,7 @@ export default function CoreHealthcareSolutions() {
                     {item.description}
                   </p>
                 </div>
-                <div className="flex items-center gap-1 text-blue-500 text-[9px] font-semibold group-hover:gap-2 transition-all duration-200">
+                <div className="flex items-center gap-1 text-blue-400 text-[9px] font-semibold group-hover:gap-2 transition-all duration-200">
                   Learn More
                   <ArrowRight size={13} />
                 </div>

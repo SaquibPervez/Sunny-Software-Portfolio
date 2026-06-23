@@ -102,7 +102,7 @@ export default function ClientBenefits() {
           variants={fadeUp}
           className="text-center max-w-2xl mx-auto"
         >
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+          <p className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/80  text-[10px] font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Client Benefits
           </p>
           <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">

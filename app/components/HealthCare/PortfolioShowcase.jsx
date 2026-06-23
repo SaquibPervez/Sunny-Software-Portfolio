@@ -243,7 +243,7 @@ function GridCard({ p, onOpen }) {
 
         <button
           onClick={() => onOpen(p)}
-          className="mt-2 w-full flex items-center justify-center gap-1.5 bg-[#6BBCE7] hover:bg-[#54a8d8] text-white text-xs font-semibold py-2.5 rounded-xl transition-all duration-200 hover:gap-2.5 cursor-pointer"
+          className="mt-2 w-full flex items-center justify-center gap-1.5 bg-blue-400 hover:bg-[#54a8d8] text-white text-xs font-semibold py-2.5 rounded-xl transition-all duration-200 hover:gap-2.5 cursor-pointer"
         >
           View Case Study <ArrowRight size={12} />
         </button>
@@ -285,7 +285,7 @@ function ListCard({ p, onOpen }) {
 
         <button
           onClick={() => onOpen(p)}
-          className="shrink-0 flex items-center gap-1.5 bg-[#6BBCE7] hover:bg-[#54a8d8] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all duration-200 hover:gap-2.5 cursor-pointer whitespace-nowrap"
+          className="shrink-0 flex items-center gap-1.5 bg-blue-400 hover:bg-[#54a8d8] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all duration-200 hover:gap-2.5 cursor-pointer whitespace-nowrap"
         >
           View Case Study <ArrowRight size={12} />
         </button>
@@ -317,7 +317,7 @@ export default function PortfolioShowcase() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+          <p className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/80  text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Portfolio / Work Showcase
           </p>
           <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
@@ -342,8 +342,7 @@ export default function PortfolioShowcase() {
                 onClick={() => setActiveFilter(f.id)}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold border transition-all duration-200 cursor-pointer ${
                   activeFilter === f.id
-                    ? "bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20"
-                    : "bg-white/[0.03] border-white/5 text-slate-400 hover:bg-white/[0.07] hover:text-white hover:border-white/10"
+                    ? "bg-blue-400 border-blue-500 text-white shadow-lg shadow-blue-600/20": "bg-white/[0.03] border-white/5 text-slate-400 hover:bg-white/[0.07] hover:text-white hover:border-white/10"
                 }`}
               >
                 {f.label}
@@ -354,13 +353,13 @@ export default function PortfolioShowcase() {
           <div className="flex items-center gap-1 bg-white/[0.03] border border-white/5 rounded-xl p-1">
             <button
               onClick={() => setViewMode("grid")}
-              className={`p-2 rounded-lg transition-all duration-200 cursor-pointer ${viewMode === "grid" ? "bg-blue-600 text-white" : "text-slate-500 hover:text-white"}`}
+              className={`p-2 rounded-lg  transition-all duration-200 cursor-pointer ${viewMode === "grid" ? "bg-blue-400 text-white" : "text-slate-500 hover:text-white"}`}
             >
               <LayoutGrid size={14} />
             </button>
             <button
               onClick={() => setViewMode("list")}
-              className={`p-2 rounded-lg transition-all duration-200 cursor-pointer ${viewMode === "list" ? "bg-blue-600 text-white" : "text-slate-500 hover:text-white"}`}
+              className={`p-2 rounded-lg transition-all duration-200 cursor-pointer ${viewMode === "list" ? "bg-blue-400 text-white" : "text-slate-500 hover:text-white"}`}
             >
               <List size={14} />
             </button>

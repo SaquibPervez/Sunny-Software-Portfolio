@@ -117,7 +117,7 @@ export default function DetailedCapabilityBreakdown() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center">
-          <p className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
+          <p className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/80  text-[11px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5">
             Detailed Capabilities
           </p>
           <h2 className="font-secondary text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
