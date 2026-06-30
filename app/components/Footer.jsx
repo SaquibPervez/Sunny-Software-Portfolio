@@ -79,7 +79,7 @@ export default function FooterMinimal() {
             href="mailto:sales@sunnysoftwareinc.com" 
             className="group block transition-all duration-500 hover:scale-105"
           >
-            <h1 className="text-[12vw] md:text-[10vw] leading-[0.85] font-black text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/70 tracking-tighter select-none">
+            <h1 className="text-[12vw] md:text-[8vw] leading-[0.85] font-bold tracking-wider select-none text-white">
               LET'S TALK
             </h1>
             <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-indigo-500 to-cyan-500 transition-all duration-700 mx-auto"></div>

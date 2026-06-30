@@ -9,8 +9,8 @@ import Image from 'next/image'
 const navLinks = [
   { title: 'Home', href: '/', delay: 0.1 },
   { title: 'About', href: '/about-us', delay: 0.2 },
-  { title: 'Contact', href: '/contact', delay: 0.4 },
   { title: 'Healthcare', href: '/healthcare-solutions', delay: 0.3 },
+  { title: 'Contact', href: '/contact', delay: 0.4 },
   
 ]
 
