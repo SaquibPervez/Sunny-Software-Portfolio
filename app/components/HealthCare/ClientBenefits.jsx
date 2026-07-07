@@ -17,48 +17,48 @@ const benefits = [
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-400",
     accentBar: "bg-blue-500",
-    title: "Reduced Administrative Workload",
-    desc: "Automate routine tasks, documentation, and workflows to reduce manual work and operational costs.",
+    title: "Less Paperwork, More Care",
+    desc: "Handle everyday tasks, paperwork, and routines automatically so your team can focus on people instead of extra costs.",
   },
   {
     icon: Clock,
     iconBg: "bg-emerald-500/10",
     iconColor: "text-emerald-400",
     accentBar: "bg-emerald-500",
-    title: "Faster Patient Handling",
-    desc: "Streamline patient registration, appointment scheduling, and OPD processes for quicker service.",
+    title: "A Smoother Welcome for Patients",
+    desc: "Make check-ins, scheduling, and clinic visits smooth and gentle, giving families a much faster, warmer experience.",
   },
   {
     icon: FolderOpen,
     iconBg: "bg-indigo-500/10",
     iconColor: "text-indigo-400",
     accentBar: "bg-indigo-500",
-    title: "Centralized Medical Data Access",
-    desc: "Securely store and access patient data from anywhere, enabling better and faster clinical decisions.",
+    title: "Patient Information, Always at Hand",
+    desc: "Keep vital health information completely safe and ready from anywhere, helping doctors make confident, timely care choices.",
   },
   {
     icon: Settings2,
     iconBg: "bg-teal-500/10",
     iconColor: "text-teal-400",
     accentBar: "bg-teal-500",
-    title: "Improved Hospital Efficiency",
-    desc: "Integrated modules and real-time insights help optimize resources, staff, and department performance.",
+    title: "Effortless Clinic Operations",
+    desc: "Connected tools and clear, real-time updates help you support your staff, balance resources, and keep your clinic running beautifully.",
   },
   {
     icon: Heart,
     iconBg: "bg-rose-500/10",
     iconColor: "text-rose-400",
     accentBar: "bg-rose-500",
-    title: "Better Patient Experience",
-    desc: "Digital-first experiences like online booking, OPD apps, and instant updates improve patient satisfaction.",
+    title: "Peace of Mind for Families",
+    desc: "Comforting, easy options like online booking and instant updates give patients true peace of mind and satisfaction.",
   },
   {
     icon: ShieldCheck,
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-400",
     accentBar: "bg-blue-500",
-    title: "Secure & Scalable Infrastructure",
-    desc: "Enterprise-grade security, compliance, and scalable architecture to grow with your healthcare organization.",
+    title: "A Safe Foundation to Grow On",
+    desc: "Deeply protected, compliant systems built to safeguard your data today and grow gently alongside your community's needs.",
   },
 ];
 
@@ -109,11 +109,8 @@ export default function ClientBenefits() {
             Benefits That Drive Better<br className="hidden sm:block" /> Healthcare Outcomes
           </h2>
           <p className="mt-5 text-slate-400 text-sm  leading-relaxed">
-            Our digital solutions are built to{" "}
-            simplify operations, improve
-            patient care, and{" "}
-          accelerate growth for
-            healthcare organizations.
+            Our software is designed to ease daily stress, support patient recovery, and help your care center thrive naturally.
+
           </p>
         </motion.div>
 

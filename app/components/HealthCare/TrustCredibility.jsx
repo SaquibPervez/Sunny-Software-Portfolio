@@ -114,7 +114,8 @@ export default function TrustCredibility() {
             Trusted by Hospitals, Clinics &<br className="hidden sm:block" /> Healthcare Organizations
           </h2>
           <p className="mt-4 text-slate-400 text-sm sm:text-sm max-w-xl mx-auto leading-relaxed">
-            Delivering secure, scalable and next-generation healthcare software solutions that organizations rely on.
+
+We deliver secure, scalable, and future-ready healthcare software solutions that teams can depend on with confidence. 
           </p>
         </motion.div>
 

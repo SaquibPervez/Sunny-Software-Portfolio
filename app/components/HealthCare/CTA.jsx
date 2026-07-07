@@ -22,8 +22,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={vp}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0d1535] via-[#0f1a3a] to-[#0a1128] border border-blue-500/15 shadow-2xl shadow-blue-900/20"
-        >
+          className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0d1535] via-[#0f1a3a] to-[#0a1128] border border-blue-500/15 shadow-2xl shadow-blue-900/20">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f608_1px,transparent_1px),linear-gradient(to_bottom,#3b82f608_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
           <div className="absolute top-[-40%] left-[-10%] w-[500px] h-[500px] bg-blue-600/15 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-[-40%] right-[-10%] w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -57,9 +56,9 @@ export default function CTA() {
               transition={{ duration: 0.65, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
               className="font-secondary text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-3xl"
             >
-              Ready to Transform Your{" "}
-              <span className="text-blue-400">Healthcare</span>{" "}
-              Operations?
+              Ready to Bring Better{" "}
+              <span className="text-blue-400">Balance</span>{" "}
+              to Your Care Center?
             </motion.h2>
 
             <motion.p
@@ -69,7 +68,7 @@ export default function CTA() {
               transition={{ duration: 0.6, delay: 0.26, ease: [0.16, 1, 0.3, 1] }}
               className="text-slate-400 text-sm  leading-relaxed max-w-xl"
             >
-              Custom CRM, Patient Management Systems, OPD Platforms, and Enterprise Healthcare Portals designed to streamline operations and improve patient outcomes.
+We build kind, unified tools, from custom patient dashboards to smooth clinic scheduling portals, designed to ease your team's daily stress and support family recovery journeys.
             </motion.p>
 
             <motion.div
@@ -84,7 +83,7 @@ export default function CTA() {
                 href="/contact"
 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/25 hover:scale-[1.02] active:scale-[0.98] text-sm cursor-pointer">              
                  <Calendar size={16} />
-                Book a Consultation
+                Let's Talk About Your Needs
               </Link>
             </motion.div>
 
@@ -96,7 +95,7 @@ className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 h
               className="flex items-center gap-2 text-slate-500 text-xs font-medium"
             >
               <Shield size={12} className="text-blue-500/70" />
-              Trusted by Hospitals, Clinics &amp; Healthcare Organizations
+              Believed in by Hospitals, Care Clinics &amp; Health Teams
             </motion.div>
 
             <motion.div

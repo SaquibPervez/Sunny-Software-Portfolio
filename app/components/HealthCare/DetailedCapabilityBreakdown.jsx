@@ -19,11 +19,11 @@ const capabilities = [
     glowColor: "bg-blue-600/5",
     imageLeft: true,
     title: "Custom CRM Architecture\nFor Healthcare",
-    desc: "Build powerful, integrated customer relationship management platforms tailored to manage the complex interactions between patients, providers, and administration.",
+    desc: "We shape thoughtful, unified relationship platforms made to support the delicate, real-world connections between patients, doctors, and office teams.",
     bullets: [
-      "Seamless patient interaction tracking",
-      "Automated communication workflows",
-      "Cross-platform data synchronization",
+      "Gentle, consistent patient support",
+      "Thoughtful automated messaging",
+      "Unified data sharing across tools",
     ],
   },
   {
@@ -38,11 +38,11 @@ const capabilities = [
     glowColor: "bg-amber-600/5",
     imageLeft: false,
     title: "Secure Patient Data\nManagement Systems",
-    desc: "Develop robust, compliant systems for storing and managing sensitive patient health information with end-to-end encryption.",
+    desc: "We build dependable, secure spaces to protect and house private health histories, relying on thorough encryption to keep personal stories safe.",
     bullets: [
-      "Multi-layered data protection",
-      "Built-in HIPAA & GDPR compliance",
-      "Real-time security audit trails",
+      "Deep layers of privacy defense",
+      "Built-in safety compliance",
+      "Constant, live security tracking",
     ],
   },
   {
@@ -57,11 +57,11 @@ const capabilities = [
     glowColor: "bg-teal-600/5",
     imageLeft: true,
     title: "Role-Based Access\nControl Systems",
-    desc: "Assign detailed permissions to users based on their specific roles within your facility, ensuring data security and integrity.",
+    desc: "Give clear, specific permissions to your team based on their exact roles in your clinic, keeping sensitive health information safe and intact.",
     bullets: [
-      "Granular permission management",
-      "Simplified user onboarding",
-      "Role-based reporting",
+      "Carefully tailored team permissions",
+      "Simple, stress-free staff setup",
+      "Role-focused insight dashboards",
     ],
   },
   {
@@ -76,11 +76,11 @@ const capabilities = [
     glowColor: "bg-indigo-600/5",
     imageLeft: false,
     title: "Real-Time Appointment &\nOPD Scheduling",
-    desc: "Optimize patient flow and reduce wait times with an elegant, multi-calendar scheduling engine and patient self-service portal.",
+    desc: "Help patients move easily through their day and reduce stress with a clear, shared scheduling tool and an easy patient portal.",
     bullets: [
-      "Dynamic calendar updates",
-      "Integrated patient booking portal",
-      "Automated appointment reminders",
+      "Instant, live calendar changes",
+      "Welcoming patient booking pages",
+      "Kind, automatic visit reminders",
     ],
   },
   {
@@ -95,11 +95,11 @@ const capabilities = [
     glowColor: "bg-cyan-600/5",
     imageLeft: true,
     title: "Cloud-Based Medical Record\nSystems (EMR/EHR)",
-    desc: "Design intuitive, accessible, and connected electronic medical and health record systems for better clinical decision-making.",
+    desc: "We create easy, connected digital health files that help medical teams see the whole picture and make the best choices for care.",
     bullets: [
-      "Comprehensive patient health history",
-      "Interoperability with existing care systems",
-      "Secure, accessible cloud-based storage",
+      "Full, clear patient health journeys",
+      "Easy connection with current tools",
+      "Safe, dependable cloud storage",
     ],
   },
 ];
@@ -124,7 +124,7 @@ export default function DetailedCapabilityBreakdown() {
             Detailed Capability Breakdown
           </h2>
           <p className="mt-4 text-slate-400 text-sm sm:text-sm max-w-xl mx-auto leading-relaxed">
-            Deep-dive into the core systems we build engineered for security, scale, and clinical excellence.
+A closer look at the heart of our software, built with deep respect for safety, growth, and clinical care.
           </p>
         </motion.div>
         <div className="flex flex-col gap-12 lg:gap-20">

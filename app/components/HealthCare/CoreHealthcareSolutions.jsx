@@ -20,7 +20,7 @@ const solutions = [
     iconColor: "text-slate-300",
     accentColor: "group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500/40",
     title: "Hospital CRM Systems",
-    description: "Centralized system for managing hospital operations, departments, and staff coordination.",
+    description: "One central tool to manage your entire hospital, connect different departments, and organize staff schedules.",
   },
   {
     icon: ClipboardList,
@@ -28,7 +28,7 @@ const solutions = [
     iconColor: "text-amber-400",
     accentColor: "group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-500/40",
     title: "Patient Management System",
-    description: "Patient records, history tracking, appointment scheduling, and visit management.",
+    description: "Keep all patient records in one safe place, track medical histories, and handle appointments and visits without the hassle.",
   },
   {
     icon: MonitorSmartphone,
@@ -36,7 +36,7 @@ const solutions = [
     iconColor: "text-slate-300",
     accentColor: "group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-500/40",
     title: "Online OPD Platforms",
-    description: "Virtual consultation systems with booking, video support, and digital prescriptions.",
+    description: "Let patients book visits online, see doctors over video calls, and receive digital prescriptions instantly.",
   },
   {
     icon: Pill,
@@ -44,7 +44,7 @@ const solutions = [
     iconColor: "text-orange-400",
     accentColor: "group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500/40",
     title: "Pharma Management Systems",
-    description: "Inventory tracking, batch management, compliance tracking, and distribution systems.",
+    description: "Easily track medicine stock, manage batches, stay compliant with regulations, and oversee shipping.",
   },
   {
     icon: Smartphone,
@@ -52,7 +52,7 @@ const solutions = [
     iconColor: "text-slate-300",
     accentColor: "group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500/40",
     title: "Healthcare Mobile Apps",
-    description: "Android/iOS apps for patients, doctors, and administrative staff.",
+    description: "Simple iPhone and Android apps built specifically for patients, doctors, and office staff to stay connected.  ",
   },
   {
     icon: LayoutDashboard,
@@ -60,7 +60,7 @@ const solutions = [
     iconColor: "text-blue-400",
     accentColor: "group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500/40",
     title: "Doctor & Staff Portals",
-    description: "Role-based dashboards for medical professionals and hospital staff.",
+    description: "Private, secure login pages designed to show doctors and nurses exactly the information they need for their specific jobs.",
   },
   {
     icon: FlaskConical,
@@ -68,7 +68,7 @@ const solutions = [
     iconColor: "text-emerald-400",
     accentColor: "group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-500/40",
     title: "Laboratory Systems",
-    description: "Test tracking, reports generation, and lab workflow automation.",
+    description: "Track medical tests from start to finish, automate daily lab tasks, and create clear reports for patients.",
   },
   {
     icon: CreditCard,
@@ -76,7 +76,7 @@ const solutions = [
     iconColor: "text-orange-400",
     accentColor: "group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500/40",
     title: "Billing & Insurance Systems",
-    description: "Automated billing, claims processing, and payment tracking systems.",
+    description: "Speed up your payments with automated medical billing, simple insurance claims, and easy payment tracking.",
   },
 ];
 
@@ -111,8 +111,7 @@ export default function CoreHealthcareSolutions() {
             Core Healthcare Solutions
           </h2>
           <p className="mt-4 text-slate-400 text-sm  max-w-xl mx-auto leading-relaxed">
-            We design and develop scalable healthcare systems that improve hospital operations, patient experience, and digital workflows.
-          </p>
+We build easy-to-use healthcare software that helps hospitals run smoothly, makes things better for patients, and cuts down on paperwork.          </p>
         </motion.div>
         <motion.div
           variants={containerVariants}

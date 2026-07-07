@@ -115,9 +115,9 @@ export default function Hero() {
                 className="font-secondary text-[clamp(2.2rem,4.8vw,3rem)] font-black tracking-normal leading-[1.05]"
               >
                 Healthcare Software <br />
-                Solutions Built for{" "}
+                Solutions Designed for{" "}
                 <span className="block text-blue-400">
-                  Modern Care Systems
+                  Today’s Care Teams
                 </span>
               </motion.h1>
             </div>
@@ -136,7 +136,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="text-slate-400 text-medium max-w-xl leading-relaxed font-normal"
             >
-              Custom CRM, Patient Management Systems, OPD Platforms, and Enterprise Healthcare Portals designed to streamline operations and improve patient outcomes.
+We develop custom CRM systems, patient management platforms, OPD solutions, and enterprise healthcare portals that help simplify daily operations and support better patient outcomes.
             </motion.p>
           </div>
 
@@ -171,7 +171,7 @@ export default function Hero() {
             className="mt-8 flex items-center gap-2 text-slate-400 font-medium text-xs  tracking-wide"
           >
             <Shield size={15} className="text-blue-500" />
-            Trusted by Hospitals, Clinics & Healthcare Organizations
+Trusted by hospitals, clinics, and healthcare organizations
           </motion.div>
 
           {/* Features Row — aligned under left content */}
@@ -187,7 +187,7 @@ export default function Hero() {
               </div>
               <div>
                 <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Scalable Solutions</h3>
-                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Built to grow with your organization.</p>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Created to expand as your organization grows.</p>
               </div>
             </motion.div>
 
@@ -197,7 +197,7 @@ export default function Hero() {
               </div>
               <div>
                 <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Secure & Compliant</h3>
-                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">HIPAA-ready & data privacy focused.</p>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Built with HIPAA readiness and strong data privacy in mind.</p>
               </div>
             </motion.div>
 
@@ -207,7 +207,7 @@ export default function Hero() {
               </div>
               <div>
                 <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Operational Efficiency</h3>
-                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Automate workflows & reduce workload.</p>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Streamline tasks, automate workflows, and reduce manual effort.</p>
               </div>
             </motion.div>
 
@@ -217,7 +217,7 @@ export default function Hero() {
               </div>
               <div>
                 <h3 className="text-xs font-semibold text-white tracking-wide group-hover:text-indigo-400 transition-colors">Better Patient Care</h3>
-                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Deliver seamless digital experiences.</p>
+                <p className="text-[10px] text-slate-400 mt-1 leading-relaxed font-normal">Provide smooth, connected, and digital-first care experiences.</p>
               </div>
             </motion.div>
           </motion.div>
