@@ -144,10 +144,10 @@ export default function FooterMinimal() {
         <div className="flex flex-col items-center md:items-end gap-2 text-xs text-slate-500">
           <span>&copy; {new Date().getFullYear()} SUNNY SOFTWARE INC.</span>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-slate-400 transition-colors">
+            <a href="/private-policy" className="hover:text-slate-400 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-slate-400 transition-colors">
+            <a href="/term-and-conditions" className="hover:text-slate-400 transition-colors">
               Terms of Service
             </a>
           </div>
