@@ -21,7 +21,7 @@ export default function PrivatePolicy() {
 
         <div className="border-t border-white/10" />
 
-         <div className="grid grid-cols-1 lg:grid-cols-12 lg:divide-x lg:divide-white/10 gap-10 lg:gap-0 py-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 lg:divide-x lg:divide-white/10 gap-10 lg:gap-0 py-12 items-start">
           <div className="lg:col-span-4 lg:pr-10">
             <Link
               href="/private-policy"
@@ -36,22 +36,22 @@ export default function PrivatePolicy() {
               Welcome to Sunny Software Inc.
             </p>
             <p className="text-xl md:text-2xl text-white font-medium leading-relaxed">
-These Terms & Conditions define the rules and responsibilities governing the use of the Sunny Software Inc. website and our software development services. By accessing our website or working with our team, you acknowledge and agree to these terms, which are designed to ensure a transparent, secure, and professional working relationship.          </p>
-        </div>
+              These Terms & Conditions define the rules and responsibilities governing the use of the Sunny Software Inc. website and our software development services. By accessing our website or working with our team, you acknowledge and agree to these terms, which are designed to ensure a transparent, secure, and professional working relationship.          </p>
+          </div>
         </div>
 
         <div className="border-t border-white/10" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-white/10 gap-10 md:gap-0  text-slate-400 leading-relaxed">
           <p className="md:pr-10 py-12">
-Clients agree to provide accurate information, project requirements, and timely approvals throughout the development process. Delays in communication, content delivery, or required feedback may impact project schedules. All services are delivered according to the scope and milestones outlined in the agreed project proposal.          </p>
+            Clients agree to provide accurate information, project requirements, and timely approvals throughout the development process. Delays in communication, content delivery, or required feedback may impact project schedules. All services are delivered according to the scope and milestones outlined in the agreed project proposal.          </p>
           <p className="md:pl-10 py-12">
-Unless otherwise specified in a written agreement, all website designs, source code, and digital assets remain the property of [Company Name] until payment obligations have been fulfilled. We reserve the right to modify these Terms & Conditions as our services evolve, and continued use of our website signifies acceptance of any updates.          </p>
+            Unless otherwise specified in a written agreement, all website designs, source code, and digital assets remain the property of [Company Name] until payment obligations have been fulfilled. We reserve the right to modify these Terms & Conditions as our services evolve, and continued use of our website signifies acceptance of any updates.          </p>
         </div>
-                <div className="border-b border-white/10" />
+        <div className="border-b border-white/10" />
 
 
-        
+
       </div>
     </section>
   );
