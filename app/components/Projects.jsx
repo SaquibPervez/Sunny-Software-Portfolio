@@ -2,21 +2,17 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronRight, ChevronLeft, ExternalLink, Play, Pause, ArrowRight } from "lucide-react";
 import {
-  Code,
-  Database,
-  Cloud,
-  Server,
-  Cpu,
-  Layers,
+  ChevronRight,
+  ChevronLeft,
+  Play,
+  Pause,
 } from "lucide-react";
 import Image from "next/image";
 
-
 // Project Categories: Add projects under "our" or "other" via categoryType
 const categories = [
-  { id: "our", label: "Our Projects" },
+  { id: "our", label: "Our Brands" },
   { id: "other", label: "Other Projects" },
 ];
 
@@ -35,7 +31,7 @@ const slides = [
     metrics: [
       "Custom Print Solutions",
       "Branded Packaging",
-      "Premium Finishing"
+      "Premium Finishing",
     ],
     color: "from-blue-500 to-cyan-500",
     link: "https://quickprocess.com.pk/",
@@ -51,71 +47,109 @@ const slides = [
       "Pocket Perfume provides a complete online shopping experience for portable fragrance sticks, featuring 30+ designer-inspired scents, product categories, bundles, pocket+ subscriptions, scent discovery quizzes, and a responsive storefront designed for customers on the go.",
     image: "/pocket_perfume.jpg",
     category: "E-Commerce",
-    metrics: [
-      "30+ Fragrances",
-      "Pocket+ Membership",
-      "Scent Discovery Quiz"
-    ],
+    metrics: ["30+ Fragrances", "Pocket+ Membership", "Scent Discovery Quiz"],
     color: "from-pink-500 to-purple-500",
     link: "/",
   },
-{
-  id: 3,
-  categoryType: "our",
-  title: "WebNApp Agency",
-  subtitle: "Digital Experiences & Technology Solutions",
-  description:
-    "A full-service digital agency creating impactful brand experiences through strategy, design, and high-performance web and mobile development.",
-  longDescription:
-    "WebNApp Agency brings together strategy, branding, UI/UX design, and modern technology to help businesses build memorable digital experiences. From responsive websites and mobile applications to creative campaigns and scalable digital products, we deliver cohesive solutions designed for growth.",
-  image: "/web-app-agency.jpg",
-  category: "Digital Agency",
-  metrics: ["UI/UX Design", "Web & Mobile", "Digital Strategy"],
-  color: "from-purple-500 to-pink-500",
-  link: "https://web-and-app-agency.vercel.app/",
-},
-{
-  id: 4,
-  categoryType: "our",
-  title: "Skillseval.ai",
-  subtitle: "AI-Powered Talent Evaluation Platform",
-  description:
-    "An intelligent recruitment platform that automates candidate screening, skills assessment, and shortlisting to help teams hire faster and more objectively.",
-  longDescription:
-    "Skillseval.ai combines AI-driven candidate evaluation, automated skills testing, resume analysis, and smart shortlisting into one recruitment platform. It helps hiring teams assess candidates based on skills, generate actionable insights, and build a more efficient, data-driven hiring process.",
-  image: "/skillseval.jpg",
-  category: "AI & Recruitment",
-  metrics: ["AI Screening", "Skills Assessment", "Smart Shortlisting"],
-  color: "from-blue-500 to-cyan-500",
-  link: "https://skillseval.ai",
-},
-{
-  id: 5,
+  {
+    id: 3,
+    categoryType: "our",
+    title: "WebNApp Agency",
+    subtitle: "Digital Experiences & Technology Solutions",
+    description:
+      "A full-service digital agency creating impactful brand experiences through strategy, design, and high-performance web and mobile development.",
+    longDescription:
+      "WebNApp Agency brings together strategy, branding, UI/UX design, and modern technology to help businesses build memorable digital experiences. From responsive websites and mobile applications to creative campaigns and scalable digital products, we deliver cohesive solutions designed for growth.",
+    image: "/web-app-agency.jpg",
+    category: "Digital Agency",
+    metrics: ["UI/UX Design", "Web & Mobile", "Digital Strategy"],
+    color: "from-purple-500 to-pink-500",
+    link: "https://web-and-app-agency.vercel.app/",
+  },
+  {
+    id: 4,
+    categoryType: "our",
+    title: "Skillseval.ai",
+    subtitle: "AI-Powered Talent Evaluation Platform",
+    description:
+      "An intelligent recruitment platform that automates candidate screening, skills assessment, and shortlisting to help teams hire faster and more objectively.",
+    longDescription:
+      "Skillseval.ai combines AI-driven candidate evaluation, automated skills testing, resume analysis, and smart shortlisting into one recruitment platform. It helps hiring teams assess candidates based on skills, generate actionable insights, and build a more efficient, data-driven hiring process.",
+    image: "/skillseval.jpg",
+    category: "AI & Recruitment",
+    metrics: ["AI Screening", "Skills Assessment", "Smart Shortlisting"],
+    color: "from-blue-500 to-cyan-500",
+    link: "https://skillseval.ai",
+  },
+  {
+    id: 5,
+    categoryType: "other",
+    title: "Mealvero",
+    subtitle: "Food Delivery & Meal Ordering Platform",
+    description:
+      "A modern food delivery platform connecting customers with restaurants, meal plans, and convenient doorstep ordering.",
+    longDescription:
+      "Mealvero delivers a seamless food ordering experience where customers can explore restaurants, discover meal plans, place orders, and track their deliveries. The platform combines a clean, engaging interface with essential ordering features to make finding and enjoying great food simple and convenient.",
+    image: "/mealvero.jpg",
+    category: "Food & Delivery",
+    metrics: ["Restaurant Discovery", "Meal Plans", "Order Tracking"],
+    color: "from-orange-500 to-amber-500",
+    link: "/",
+  },
+  {
+    id: 6,
+    categoryType: "other",
+    title: "Interactive Med Systems",
+    subtitle: "Telemedicine Platform",
+    description:
+      "A scalable telemedicine platform connecting patients, doctors, call centers, and pharmacies with real-time communication tools.",
+    longDescription:
+      "IMS platform enables patients to receive care quickly, provides script pad and chat for physicians, and integrates with backend services for performance and scalability.",
+    image: "/IMS.png", // replace with your project image
+    category: "Healthcare Technology",
+    metrics: [
+      "Scalable Architecture",
+      "User-Friendly UI",
+      "Real-Time Communication",
+    ],
+    color: "from-emerald-500 to-teal-500",
+    link: "/",
+  },
+  {
+    id: 7,
+    categoryType: "our",
+    title: "Webcroz",
+    subtitle: "Managed IT & Software Solutions",
+    description:
+      "A Florida-based technology company providing web development, mobile app development, custom software, IT management, and digital marketing solutions for businesses and startups.",
+    longDescription:
+      "Webcroz helps businesses and startups grow through customized technology solutions, including web and software development, mobile applications, social media marketing, PPC, data science, and IT management. The company focuses on combining modern technology, functionality, and innovative design to improve efficiency, customer experience, and business growth.",
+    image: "/webcroz.jpg",
+    category: "Technology & IT Solutions",
+    metrics: ["25K+ Companies", "120+ Active Businesses", "4.9 Client Rating"],
+    color: "from-blue-500 to-indigo-500",
+    link: "https://webcroz.com/",
+  },
+  {
+  id: 8,
   categoryType: "other",
-  title: "Mealvero",
-  subtitle: "Food Delivery & Meal Ordering Platform",
+  title: "TrueCare National",
+  subtitle: "Healthcare Management Platform",
   description:
-    "A modern food delivery platform connecting customers with restaurants, meal plans, and convenient doorstep ordering.",
+    "A healthcare platform for managing doctors, pharmacies, patients, prescriptions, and billing.",
   longDescription:
-    "Mealvero delivers a seamless food ordering experience where customers can explore restaurants, discover meal plans, place orders, and track their deliveries. The platform combines a clean, engaging interface with essential ordering features to make finding and enjoying great food simple and convenient.",
-  image: "/mealvero.jpg",
-  category: "Food & Delivery",
-  metrics: ["Restaurant Discovery", "Meal Plans", "Order Tracking"],
-  color: "from-orange-500 to-amber-500",
+    "TrueCare National centralizes healthcare operations with tools for managing agencies, doctors, pharmacies, patients, prescriptions, drug inventory, consultations, and billing.",
+  image: "/truecare.jpg",
+  category: "Healthcare Technology",
+  metrics: [
+    "12 Agencies",
+    "10 Active Doctors",
+    "302 Drugs"
+  ],
+  color: "from-teal-500 to-cyan-500",
   link: "/",
 },
 ];
-
-const techIcons = {
-  "React.js": <Code className="w-3.5 h-3.5" />,
-  "Node.js": <Server className="w-3.5 h-3.5" />,
-  "Flask": <Server className="w-3.5 h-3.5" />,
-  "JavaScript": <Code className="w-3.5 h-3.5" />,
-  "Jinja2": <Layers className="w-3.5 h-3.5" />,
-  "MongoDB": <Database className="w-3.5 h-3.5" />,
-  "PostgreSQL": <Database className="w-3.5 h-3.5" />,
-  "AWS": <Cloud className="w-3.5 h-3.5" />,
-};
 
 export default function FeaturedProjects() {
   const [selectedCategory, setSelectedCategory] = useState("our");
@@ -124,12 +158,14 @@ export default function FeaturedProjects() {
   const [direction, setDirection] = useState(1);
 
   const filteredSlides = slides.filter(
-    (slide) => slide.categoryType === selectedCategory
+    (slide) => slide.categoryType === selectedCategory,
   );
   const total = filteredSlides.length;
 
   const activeSlide =
-    filteredSlides.find((s) => s.id === activeId) || filteredSlides[0] || slides[0];
+    filteredSlides.find((s) => s.id === activeId) ||
+    filteredSlides[0] ||
+    slides[0];
 
   const handleCategoryChange = (catId) => {
     if (catId === selectedCategory) return;
@@ -144,7 +180,9 @@ export default function FeaturedProjects() {
   const goNext = useCallback(() => {
     if (total <= 1) return;
     setDirection(1);
-    const currentIndex = filteredSlides.findIndex((s) => s.id === activeSlide?.id);
+    const currentIndex = filteredSlides.findIndex(
+      (s) => s.id === activeSlide?.id,
+    );
     const nextIndex = (currentIndex + 1) % total;
     setActiveId(filteredSlides[nextIndex].id);
   }, [total, filteredSlides, activeSlide?.id]);
@@ -152,15 +190,20 @@ export default function FeaturedProjects() {
   const goPrev = useCallback(() => {
     if (total <= 1) return;
     setDirection(-1);
-    const currentIndex = filteredSlides.findIndex((s) => s.id === activeSlide?.id);
+    const currentIndex = filteredSlides.findIndex(
+      (s) => s.id === activeSlide?.id,
+    );
     const prevIndex = (currentIndex - 1 + total) % total;
     setActiveId(filteredSlides[prevIndex].id);
   }, [total, filteredSlides, activeSlide?.id]);
 
-  const goToSlide = useCallback((id) => {
-    setDirection(id > activeSlide?.id ? 1 : -1);
-    setActiveId(id);
-  }, [activeSlide?.id]);
+  const goToSlide = useCallback(
+    (id) => {
+      setDirection(id > activeSlide?.id ? 1 : -1);
+      setActiveId(id);
+    },
+    [activeSlide?.id],
+  );
 
   // Autoplay
   useEffect(() => {
@@ -174,7 +217,7 @@ export default function FeaturedProjects() {
     const onKey = (e) => {
       if (e.key === "ArrowRight") goNext();
       if (e.key === "ArrowLeft") goPrev();
-      if (e.key === " ") setAutoplay(prev => !prev);
+      if (e.key === " ") setAutoplay((prev) => !prev);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -182,7 +225,6 @@ export default function FeaturedProjects() {
 
   return (
     <section className="min-h-screen w-full bg-[#0B0F19] overflow-hidden relative font-sans">
-
       {/* Top Header */}
       <div className="relative z-30 px-6 md:px-20 pt-10 pb-6 md:pt-20 md:pb-10">
         <motion.div
@@ -204,8 +246,9 @@ export default function FeaturedProjects() {
 
           {/* Description */}
           <p className="text-lg text-white/60 max-w-2xl mb-8 leading-relaxed">
-            Industry-defining solutions crafted with precision engineering and innovative design.
-            Each project represents our commitment to solving complex challenges.
+            Industry-defining solutions crafted with precision engineering and
+            innovative design. Each project represents our commitment to solving
+            complex challenges.
           </p>
 
           {/* Category Tabs (Our Projects / Other Projects) & Controls */}
@@ -214,7 +257,9 @@ export default function FeaturedProjects() {
             <div className="p-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md inline-flex items-center gap-1 shadow-lg">
               {categories.map((cat) => {
                 const isActive = selectedCategory === cat.id;
-                const count = slides.filter((s) => s.categoryType === cat.id).length;
+                const count = slides.filter(
+                  (s) => s.categoryType === cat.id,
+                ).length;
                 return (
                   <button
                     key={cat.id}
@@ -229,7 +274,11 @@ export default function FeaturedProjects() {
                       <motion.div
                         layoutId="activeCategoryIndicator"
                         className="absolute inset-0 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm"
-                        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        }}
                       />
                     )}
                     <span className="relative z-10 flex items-center gap-2">
@@ -254,7 +303,11 @@ export default function FeaturedProjects() {
               onClick={() => setAutoplay(!autoplay)}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white transition-all duration-300 text-sm font-medium cursor-pointer"
             >
-              {autoplay ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+              {autoplay ? (
+                <Pause className="w-3.5 h-3.5" />
+              ) : (
+                <Play className="w-3.5 h-3.5" />
+              )}
               <span>{autoplay ? "Pause" : "Play"}</span>
             </button>
           </div>
@@ -316,7 +369,10 @@ export default function FeaturedProjects() {
                       <motion.div
                         animate={{
                           width: activeSlide.id === slide.id ? 32 : 12,
-                          backgroundColor: activeSlide.id === slide.id ? "white" : "rgba(255,255,255,0.2)"
+                          backgroundColor:
+                            activeSlide.id === slide.id
+                              ? "white"
+                              : "rgba(255,255,255,0.2)",
                         }}
                         className="h-0.5 rounded-full transition-all duration-300"
                       />
@@ -337,7 +393,7 @@ export default function FeaturedProjects() {
                   exit={{ opacity: 0, x: direction * -100 }}
                   transition={{
                     duration: 0.6,
-                    ease: [0.32, 0.72, 0, 1]
+                    ease: [0.32, 0.72, 0, 1],
                   }}
                   className="max-w-4xl w-full space-y-4 md:space-y-6"
                 >
@@ -418,7 +474,10 @@ export default function FeaturedProjects() {
                   }}
                   className="absolute inset-0 w-full h-full pointer-events-none"
                 >
-                  <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
+                  <svg
+                    viewBox="0 0 100 100"
+                    className="w-full h-full overflow-visible"
+                  >
                     <defs>
                       <path
                         id="visitSiteCirclePath"
@@ -480,7 +539,10 @@ export default function FeaturedProjects() {
                       <motion.div
                         animate={{
                           width: activeSlide.id === slide.id ? 24 : 8,
-                          backgroundColor: activeSlide.id === slide.id ? "white" : "rgba(255,255,255,0.3)"
+                          backgroundColor:
+                            activeSlide.id === slide.id
+                              ? "white"
+                              : "rgba(255,255,255,0.3)",
                         }}
                         className="h-1 rounded-full transition-all duration-300"
                       />

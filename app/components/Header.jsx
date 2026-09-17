@@ -101,7 +101,7 @@ export default function Navbar() {
                 width={100}
                 height={100}
                 priority
-                className="relative z-10 transition-all duration-300 hover:rotate-12"
+                className="relative z-10 transition-all duration-300"
               />
             </Link>
           </motion.div>
